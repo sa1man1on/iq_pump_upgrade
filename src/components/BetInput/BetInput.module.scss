@@ -1,0 +1,30 @@
+.wrapper {
+}
+.bet_input_wrapper{
+
+}
+.header{
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.input{
+  text-align: center;
+  width: 140px;
+  background: rgba(128, 128, 128, 0.3);
+  padding: 8px 9px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--main-blue);
+  &::placeholder{
+    text-align: center;
+
+  }
+}
+.min_max_input_tip{
+  font-weight: 200;
+  font-size: 11px;
+}

@@ -1,0 +1,37 @@
+.task_adder_group_wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  width: 85px;
+  height: 100px;
+  background-image: url("../../assets/hexagon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.sberbank{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("../../assets/sberbank.svg");
+  background-repeat: no-repeat;
+  left: 15px;
+  background-size: 55% 100%;
+}
+.task_add{
+  font-weight: 800;
+  color: black;
+  display: flex;
+  align-items: center;   /* вертикальное выравнивание */
+  justify-content: center; /* горизонтальное выравнивание */
+  text-align: center; /* если вдруг многострочный */
+
+  top: -58px;
+  left: 65px;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url("../../assets/hexagon_add_task_button.svg");
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+}

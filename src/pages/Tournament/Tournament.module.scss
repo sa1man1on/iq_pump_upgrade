@@ -1,0 +1,130 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GameContainer {
+  width: 1920px;
+  background-color: #000000;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgb(0, 255, 255) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(53px);
+  }
+}
+
+// vs container
+.vs_container{
+  width: 320px;
+  height: 170px;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar_right{
+  transform: scaleX(-1);
+  img{
+    width: 215px;
+  }
+  top: 105px;
+  right: -100px;
+  position: absolute;
+  //filter: brightness(30%) blur(2px);
+}
+.avatar_left{
+  img{
+    width: 215px;
+  }
+  top: 0;
+  left: -45px;
+  position: absolute;
+}
+.vs_text{
+  z-index: -1;
+  top: 107px;
+  left: 126px;
+  font-weight: 800;
+  font-style: italic;
+  position: absolute;
+  font-size: 110px;
+  opacity: 0.6;
+  span{
+    position: absolute;
+    top: 27px;
+    left: 49px;
+  }
+}
+
+.avatar_title{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 165px;
+  font-weight: 600;
+  color: #B8BBBB;
+  font-style: italic;
+}
+
+.avatar_title_right{
+  transform: scaleX(-1);
+  position: absolute;
+  left: 75px;
+}
+
+.avatar_title_rightAnswers{
+  color: #E2E200;
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.text{
+  font-size: 14px;
+}
+.time{
+  font-family: "Teko", sans-serif;
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 100;
+}
+.opponent_timer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+.timer_background{
+  position: relative;
+}
+.hex_1{
+  position: absolute;
+  top: -49px;
+  right: -26px;
+  scale: 1;
+}
+.hex_2{
+  position: absolute;
+  top: -50px;
+  left: -10px;
+  scale: 0.6;
+}
+.hex_3{
+  position: absolute;
+  top: -150px;
+  left: -45px;
+}
+

@@ -1,0 +1,25 @@
+.tournament_creation_settings_container {
+  display: flex;
+  //margin: 0 10px;
+  position: relative;
+  z-index: 3;
+}
+.header{
+  font-weight: 900;
+  margin-bottom:15px;
+}
+.error_message{
+  color: red;
+  //width: 40px;
+  margin-left:10px;
+  margin-top: 5px;
+  font-size: 10px;
+  width: 87px;
+}
+.difficult_header{
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.difficult_wrapper{
+  margin-bottom: 30px;
+}

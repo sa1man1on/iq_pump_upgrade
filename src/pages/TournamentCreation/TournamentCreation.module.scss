@@ -1,0 +1,33 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+.GameContainer {
+  width: 1920px;
+  background-color: #000000;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.TaskCreationContainer{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 14px;
+}
+.glow{
+  position: absolute;
+  z-index: 2;
+  background: radial-gradient(circle, rgb(0, 255, 255) -20%, #000000 69%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+

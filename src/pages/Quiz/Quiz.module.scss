@@ -1,0 +1,27 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+}
+.GameContainer {
+  width: 100vw;
+  padding-bottom: 90px;
+  align-items: center;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.wrapper{
+  margin: 0 20px;
+}
+.margin_top{
+  margin-top: 20px;
+}

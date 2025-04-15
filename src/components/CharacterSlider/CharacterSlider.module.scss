@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.prev{
+  transform: scaleX(-1);
+  width: 100px;
+  margin-bottom: 150px;
+}
+.next{
+  width: 100px;
+  margin-bottom: 150px;
+}
+.image{
+  margin-top: 45px;
+  width: 215px;
+}
+.arrow_right{
+
+}
+
+.arrow_left{
+
+}
+.button{
+  background-color: transparent;
+  &:focus{
+    outline:none;
+  }
+  &:hover{
+    border-color:transparent;
+  }
+}
+.arrow{
+  width: 14px;
+}

@@ -1,0 +1,83 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+}
+.GameContainer {
+  width: 100vw;
+  padding-bottom: 90px;
+  align-items: center;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+
+.wrapper {
+}
+.buttons_container{
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.2rem;
+
+  }
+}
+.deposit{
+  position: absolute;
+  right: -22px;
+  top: 45px;
+  background-image: url("../../assets/blue_deposit.svg");
+  width: 256px;
+  height: 56px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: scale(0.85);
+  &::after {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 300px;
+    height: 68px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgb(0, 255, 255) 0%, transparent 100%);
+    pointer-events: none;
+    filter: blur(53px);
+  }
+}
+.withdrawal{
+  background-image: url("../../assets/widthdrawl.svg");
+  width: 256px;
+  height: 56px;
+  position: absolute;
+  left: -22px;
+  background-repeat: no-repeat;
+  transform: scale(0.85);
+  &::after {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    width: 330px;
+    height: 68px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, transparent 100%);
+    pointer-events: none;
+    filter: blur(53px);
+  }
+}

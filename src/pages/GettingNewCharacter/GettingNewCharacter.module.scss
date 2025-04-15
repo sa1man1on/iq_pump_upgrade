@@ -1,0 +1,48 @@
+.getting_new_character_wrapper {
+  position: relative;
+}
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+.GameContainer {
+  width: 1920px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  background: radial-gradient(circle, rgb(255, 255, 255) -37%, transparent 56%);
+}
+.new_character{
+  height: 85vh;
+}
+.coefficient{
+  position: absolute;
+  top: 74px;
+  right: 7px;
+  font-size: 70px;
+  font-weight: 900;
+}
+.coefficient_number{
+  font-style:italic;
+}
+.coefficient_description{
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.congratulation{
+  position: absolute;
+  top: 260px;
+  left: 50px;
+  font-weight: 300;
+}
+.name{
+  position: absolute;
+  bottom: 190px;
+  left: 30px;
+  font-size: 35px;
+  font-weight: 800;
+  font-style: italic;
+}

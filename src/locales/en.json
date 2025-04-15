@@ -1,0 +1,9 @@
+
+{
+  "about_game": "About game",
+  "I_sent":"I sent",
+  "Connect_ERC20": "Connect ERC20",
+  "To_start_the_game": "To start the game, please enable notifications via the Telegram bot.",
+  "send_code": "  send the code below to the bot",
+  "not_connected":"No connection, or the code was entered incorrectly."
+}

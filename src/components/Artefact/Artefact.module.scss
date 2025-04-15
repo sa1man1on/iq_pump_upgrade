@@ -1,0 +1,34 @@
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background-image: url("../../assets/transparent_hexagon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  img.heal{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    width: 60%;
+  }
+  img.next{
+    position: absolute;
+    top: 27px;
+    left: 18px;
+    width: 60%;
+  }
+  img.shield{
+
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    width: 45%;
+
+  }
+}
+.wrapper.active{
+  background-image: url("../../assets/transparent_hexagon_active.svg");
+}

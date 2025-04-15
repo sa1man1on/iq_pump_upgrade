@@ -1,0 +1,135 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+.GameContainer {
+  width: 1920px;
+  background-color: #000000;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.TaskCreationContainer{
+  padding: 0 15px;
+  margin-top: 100px;
+}
+.gray_thin{
+  background-color: #6a6a6a;
+  color: white;
+  outline: none;
+  border: none;
+}
+.btn{
+  color: white;
+  font-weight: 200;
+  border-radius: 27px;
+  font-size: 14px;
+  padding: 10px 45px;
+}
+
+.wrapper_1{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header{
+  margin:15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.input{
+  border-radius: 6px;
+  padding: 14px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+.input_big::placeholder {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+input::placeholder {
+  color: #ffffff;
+}
+.top_btns{
+  display: flex;
+  justify-content: space-between;
+}
+.input_big{
+  height: 70px;
+  border-radius: 10px;
+}
+.lang_container{
+  margin: 15px 0;
+}
+.lang_picker{
+  padding: 10px;
+  border-radius: 5px;
+}
+.lang_header{
+  margin-bottom: 15px;
+  color: var(--main-blue)
+}
+.answers_header{
+  margin-bottom: 15px;
+}
+.answers_wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.answer{
+  padding: 20px 35px;
+}
+.executions_header{
+  margin-top: 20px;
+}
+.executions_input{
+  margin: 15px 0px;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.lang_header, .executions_header{
+  font-size: 18px;
+  font-weight: 200;
+}
+.cost_amount{
+  color: var(--main-blue);
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.cost_header{
+  margin-top: 5px;
+}
+
+.warning{
+  font-weight: 200;
+  width: 171px;
+  color: red;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.btn_wrapper{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button_cancel{
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &:focus{
+    border: none;
+    outline: none;
+  }
+}
+

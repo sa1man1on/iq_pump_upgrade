@@ -1,0 +1,53 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+}
+.GameContainer {
+
+  width: 100vw;
+  padding-bottom: 90px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background-image: url("../../assets/chest_background.png");
+  position: relative;
+  height: 100vh; /* или любой другой размер */
+
+  background-color: #000; /* запасной фон */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* сохраняет пропорции */
+}
+
+.wrapper{
+  margin: 0 20px;
+}
+.margin_top{
+  margin-top: 20px;
+}
+.chests_container{
+  position: relative;
+}
+.chest_1{
+  position: absolute;
+  top: 57px;
+  left: 30px;
+}
+.chest_2{
+  position: absolute;
+  top: 224px;
+  left: 65px;
+}
+.chest_3{
+  position: absolute;
+  top: 106px;
+  left: 170px;
+}
+.chest{
+
+  height: 200px;
+}

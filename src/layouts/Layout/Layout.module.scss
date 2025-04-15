@@ -1,0 +1,32 @@
+.LayoutWrapper{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  padding: 25px;
+}
+
+.aboutGame{
+}
+.lang{
+  z-index: 10;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  &:hover{
+    outline: none;
+  }
+}
+.backArrow{
+  outline: none;
+  background: none;
+  border: none;
+  height: 16.25px;
+
+}
