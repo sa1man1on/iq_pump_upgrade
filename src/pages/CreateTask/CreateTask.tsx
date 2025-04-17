@@ -10,7 +10,7 @@ function CreateTask() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTournament={true}/>
+                <GameLayout isTotalAnswersSum={true}/>
                 <div className={cls.create_task_text}>
                     Создайте собственное задание со ссылкой на ваш сайт или страничку в соцсети и его увидят и выполнят
                 </div>
@@ -30,7 +30,8 @@ function CreateTask() {
                     onClick={() => {
                         navigate("/create_task")
                     }}
-                >Создать</button>
+                >Создать
+                </button>
 
                 <div className={cls.get_consulting_text}>
                     Получить подробную
