@@ -10,13 +10,12 @@ function Chests() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTournament={true}></GameLayout>
+                <GameLayout isTotalAnswersSum={true}></GameLayout>
                 <div className={cls.wrapper}>
                     <div className={cls.chests_container}>
-                        <img src={chest_1} className={clsx(cls.chest_1, cls.chest)} ></img>
-                        <img src={chest_2} className={clsx(cls.chest_2, cls.chest)} ></img>
-                        <img src={chest_3} className={clsx(cls.chest_3, cls.chest)} ></img>
-
+                        <img alt='' src={chest_1} className={clsx(cls.chest_1, cls.chest)}></img>
+                        <img alt='' src={chest_2} className={clsx(cls.chest_2, cls.chest)}></img>
+                        <img alt='' src={chest_3} className={clsx(cls.chest_3, cls.chest)}></img>
                     </div>
                 </div>
             </div>
