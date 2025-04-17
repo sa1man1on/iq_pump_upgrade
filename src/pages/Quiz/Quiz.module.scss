@@ -8,6 +8,7 @@
   justify-content: center;
   //align-items: center;
 }
+
 .GameContainer {
   width: 100vw;
   padding-bottom: 90px;
@@ -20,9 +21,15 @@
   overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
   margin: 0 20px;
 }
-.margin_top{
+
+.margin_top {
   margin-top: 20px;
+}
+
+.margin_top_layout {
+  margin-top: 110px;
+
 }

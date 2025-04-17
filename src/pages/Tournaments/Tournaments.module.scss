@@ -5,7 +5,7 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
 }
 
 .GameContainer {
@@ -23,6 +23,7 @@
     height: 100%;
     border-radius: 0;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -37,14 +38,16 @@
     filter: blur(80px)
   }
 }
-.choose_opponent{
+
+.choose_opponent {
   z-index: 1;
   position: relative;
   margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 // кнопка создать турнир
-.createTournamentButton{
+.createTournamentButton {
   position: absolute;
   top: 160px;
   left: 90px;
@@ -61,32 +64,37 @@
 }
 
 // vs container
-.vs_container{
+.vs_container {
   width: 320px;
   height: 170px;
   position: relative;
-  margin: 0 auto;
+  margin: 90px auto 0 auto;
 }
 
-.avatar_right{
+.avatar_right {
   transform: scaleX(-1);
-  img{
+
+  img {
     width: 175px;
   }
+
   top: 0;
   right: 0;
   position: absolute;
   filter: brightness(30%) blur(2px);
 }
-.avatar_left{
-  img{
+
+.avatar_left {
+  img {
     width: 175px;
   }
+
   top: 0;
   left: 0;
   position: absolute;
 }
-.vs_text{
+
+.vs_text {
   top: 100px;
   left: 140px;
   font-weight: 800;
@@ -97,9 +105,27 @@
 
 .card_grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
-  grid-template-rows: repeat(2, auto);   /* 2 строки */
-  gap: 16px; /* отступы между карточками */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
   width: 316px;
-  margin: 15px auto 0;
+
+  //padding-right: 8px;
 }
+
+.opponent_cards_container {
+  display: flex;
+  justify-content: center;
+  max-height: 470px;
+  overflow-y: auto;
+  position: relative;
+  //background: radial-gradient(circle, rgb(0, 255, 255) 0%, transparent 30%);
+}
+
+//.opponent_container::-webkit-scrollbar {
+//  width: 6px;
+//}
+//
+//.opponent_container::-webkit-scrollbar-thumb {
+//  background: #00ffff;
+//  border-radius: 3px;
+//}

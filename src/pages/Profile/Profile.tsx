@@ -17,7 +17,7 @@ function Profile() {
 
                     <CharacterSlider></CharacterSlider>
 
-                    <ControlsPanel ></ControlsPanel>
+                    <ControlsPanel></ControlsPanel>
 
                     <TaskAdderGroup></TaskAdderGroup>
                 </div>

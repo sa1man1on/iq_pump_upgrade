@@ -4,8 +4,6 @@
   background-color: var(--page-background-color);
 
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .GameContainer {
@@ -13,6 +11,7 @@
   background-color: #000000;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+
   &::after {
     content: "";
     position: absolute;
@@ -29,48 +28,54 @@
 }
 
 // vs container
-.vs_container{
-  width: 320px;
-  height: 170px;
+.vs_container {
+  width: 100%;
+  height: 340px;
   position: relative;
+  margin-top: 20px;
   z-index: 2;
+  display: flex;
 }
 
-.avatar_right{
+.avatar_right {
   transform: scaleX(-1);
-  img{
-    width: 215px;
+  margin-top: 60px;
+
+  img {
+    width: 120%;
+    margin-top: 80px;
+    transform: translateX(-30px);
   }
-  top: 105px;
-  right: -100px;
-  position: absolute;
-  //filter: brightness(30%) blur(2px);
+
 }
-.avatar_left{
-  img{
-    width: 215px;
+
+.avatar_left {
+  transform: translateX(-30px);
+
+  img {
+    width: 120%;
   }
-  top: 0;
-  left: -45px;
-  position: absolute;
+
 }
-.vs_text{
+
+.vs_text {
   z-index: -1;
-  top: 107px;
-  left: 126px;
   font-weight: 800;
   font-style: italic;
-  position: absolute;
-  font-size: 110px;
+  font-size: 130px;
   opacity: 0.6;
-  span{
+  padding-top: 125px;
+  transform: translateX(-35px);
+
+  span {
+    padding-top: 125px;
     position: absolute;
-    top: 27px;
-    left: 49px;
+    top: 35px;
+    transform: translateX(-23px);
   }
 }
 
-.avatar_title{
+.avatar_title {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -80,49 +85,55 @@
   font-style: italic;
 }
 
-.avatar_title_right{
+.avatar_title_right {
   transform: scaleX(-1);
   position: absolute;
   left: 75px;
 }
 
-.avatar_title_rightAnswers{
+.avatar_title_rightAnswers {
   color: #E2E200;
   font-family: "Teko", sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
 
-.text{
+.text {
   font-size: 14px;
 }
-.time{
+
+.time {
   font-family: "Teko", sans-serif;
   font-size: 70px;
   line-height: 1.2;
   font-weight: 100;
 }
-.opponent_timer{
+
+.opponent_timer {
   display: flex;
   flex-direction: column;
-  margin-top: 250px;
+  margin-top: 230px;
 }
-.timer_background{
+
+.timer_background {
   position: relative;
 }
-.hex_1{
+
+.hex_1 {
   position: absolute;
   top: -49px;
   right: -26px;
   scale: 1;
 }
-.hex_2{
+
+.hex_2 {
   position: absolute;
   top: -50px;
   left: -10px;
   scale: 0.6;
 }
-.hex_3{
+
+.hex_3 {
   position: absolute;
   top: -150px;
   left: -45px;

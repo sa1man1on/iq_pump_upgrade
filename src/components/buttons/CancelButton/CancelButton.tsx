@@ -1,8 +1,15 @@
 import cls from "./CancelButton.module.scss";
 
-function CancelButton({children}:any) {
+interface CancelButtonI {
+    onClick: () => void;
+    children: string;
+}
+
+function CancelButton({children, onClick}: CancelButtonI) {
     return (
-        <button className={cls.button_cancel}>{children}</button>
+        <button
+            onClick={onClick}
+            className={cls.button_cancel}>{children}</button>
     );
 }
 

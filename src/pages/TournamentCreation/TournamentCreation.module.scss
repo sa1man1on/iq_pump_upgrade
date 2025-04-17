@@ -12,15 +12,17 @@
 
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
-.TaskCreationContainer{
+
+.TaskCreationContainer {
+  margin-top: 100px;
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 14px;
 }
-.glow{
+
+.glow {
   position: absolute;
   z-index: 2;
   background: radial-gradient(circle, rgb(0, 255, 255) -20%, #000000 69%);

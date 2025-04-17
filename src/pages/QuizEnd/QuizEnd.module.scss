@@ -5,12 +5,14 @@
   display: flex;
   justify-content: center;
 }
+
 .GameContainer {
   width: 100vw;
   padding-bottom: 90px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   background-size: 100% 100%;
+
   &::after {
     content: "";
     z-index: 1;
@@ -19,45 +21,49 @@
     left: 50%;
     width: 250px;
     height: 250px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
     background: radial-gradient(circle, rgb(0, 255, 255) 0%, transparent 100%);
     pointer-events: none;
     filter: blur(53px);
   }
 }
 
-.QuizEndWrapper{
+.QuizEndWrapper {
   margin: 0 20px;
   z-index: 3;
 }
 
-.textnew{
+.textnew {
   position: relative;
   margin-top: 150px;
   font-size: 16px;
   z-index: 3;
 }
-.timer{
+
+.timer {
+
   position: relative;
   z-index: 3;
-  color: #48BEBE;
+  color: #67ffff;
   font-size: 72px;
   font-family: "Teko", sans-serif;
   font-weight: 300;
 }
-.mw{
+
+.mw {
   position: relative;
   z-index: 3;
   margin: 60px auto 0;
   width: 210px;
-  span{
+
+  span {
     font-weight: 800;
     font-size: 22px;
     font-STYLE: italic;
   }
 }
 
-.btn{
+.btn {
   margin-top: 40px;
   font-weight: 400;
   font-size: 20px;
@@ -68,7 +74,8 @@
   padding: 15px 30px;
   border-radius: 35px;
   box-shadow: 0 0 40px rgb(0, 202, 202);
-  &:focus{
+
+  &:focus {
     outline: none;
   }
 }

@@ -8,19 +8,19 @@ function TournamentCreationSettings() {
         <div className={cls.tournament_creation_settings_container}>
 
 
-
             <div className={cls.header_image_wrapper}>
                 <HeadImage/>
-                <div className={cls.error_message}>
-                    Недостаточно монет на балансе
-                    {/*В этот время у вас другой турнир*/}
-                </div>
+
             </div>
 
 
             <div className={cls.middle_container}>
                 <div className={cls.header}>Создание<br/>турнира</div>
                 <BetInput></BetInput>
+                <div className={cls.error_message}>
+                    Недостаточно монет на балансе
+                    {/*В этот время у вас другой турнир*/}
+                </div>
                 <div className={cls.difficult_header}>
                     Сложность
                 </div>

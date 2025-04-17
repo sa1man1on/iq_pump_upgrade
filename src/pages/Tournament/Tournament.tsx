@@ -8,7 +8,7 @@ function Tournament() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTournament={false}></GameLayout>
+                <GameLayout isProfile={true}></GameLayout>
                 <div className={cls.vs_container}>
 
                     <div className={cls.avatar_left}>
@@ -40,6 +40,7 @@ function Tournament() {
                     </div>
 
                 </div>
+
                 <div className={cls.opponent_timer}>
                     <div className={cls.text}>Start in</div>
                     <div className={cls.time}>16:43:07</div>

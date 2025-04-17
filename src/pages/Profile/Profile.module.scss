@@ -7,6 +7,7 @@
   justify-content: center;
   //align-items: center;
 }
+
 .GameContainer {
 
   width: 100vw;
@@ -17,9 +18,11 @@
   background-size: 100% 100%;
 }
 
-.wrapper{
+.wrapper {
+  pointer-events: none;
   margin: 0 20px;
 }
-.margin_top{
+
+.margin_top {
   margin-top: 20px;
 }

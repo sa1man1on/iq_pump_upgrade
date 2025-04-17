@@ -2,14 +2,18 @@ import cls from "./TaskCreation.module.scss"
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import clsx from "clsx";
 import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
+import {useNavigate} from "react-router-dom";
 
 
 function TaskCreation() {
-
+    const navigate = useNavigate();
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTournament={true}/>
+                <GameLayout
+                    isAvatar={true}
+                    isTotalAnswersSum={true}
+                />
                 <div className={cls.TaskCreationContainer}>
 
                     <div className={cls.header}>Создания задания</div>
@@ -33,12 +37,12 @@ function TaskCreation() {
 
                     <div className={cls.answers_container}>
                         <div className={cls.answers_header}>Ответы <br/> (первый верный)</div>
-                            <div className={clsx(cls.answers_wrapper)}>
-                                <button className={clsx(cls.input, cls.answer_correct)}>Верный ответ</button>
-                                <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 2</button>
-                                <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 3</button>
-                                <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 4</button>
-                            </div>
+                        <div className={clsx(cls.answers_wrapper)}>
+                            <button className={clsx(cls.input, cls.answer_correct)}>Верный ответ</button>
+                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 2</button>
+                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 3</button>
+                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 4</button>
+                        </div>
                     </div>
 
                     <div className={cls.executions_container}>
@@ -58,7 +62,10 @@ function TaskCreation() {
                         </div>
                     </div>
 
-                    <button className={cls.button_cancel}>отменить</button>
+                    <button
+                        onClick={() => navigate('/profile')}
+                        className={cls.button_cancel}>отменить
+                    </button>
 
                 </div>
             </div>

@@ -4,22 +4,24 @@
   position: relative;
   z-index: 3;
 }
-.header{
+
+.header {
   font-weight: 900;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
-.error_message{
+
+.error_message {
   color: red;
-  //width: 40px;
-  margin-left:10px;
-  margin-top: 5px;
+  margin: 10px auto 0 auto;
   font-size: 10px;
   width: 87px;
 }
-.difficult_header{
+
+.difficult_header {
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.difficult_wrapper{
+
+.difficult_wrapper {
   margin-bottom: 30px;
 }

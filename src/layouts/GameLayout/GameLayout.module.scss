@@ -1,4 +1,4 @@
-.LayoutWrapper{
+.LayoutWrapper {
   position: relative;
   color: white;
   display: flex;
@@ -8,18 +8,21 @@
   font-weight: 200;
 
 }
-.backArrow{
+
+.backArrow {
   outline: none;
   background: none;
   border: none;
   margin-top: 33px;
   height: 22.25px;
 }
-.LeftOpponent{
+
+.LeftOpponent {
   margin-top: 15px;
   margin-left: 20px;
 }
-.tokens{
+
+.tokens {
   color: #00DEF5;
   font-weight: 600;
   z-index: 1;
@@ -29,7 +32,8 @@
   transform: translateX(-50%);
   top: 27px;
 }
-.totalRightAnswers{
+
+.totalRightAnswers {
   color: #E2E200;
   font-family: "Teko", sans-serif;
   font-size: 20px;
@@ -37,29 +41,34 @@
   top: 3px;
   left: -63px;
 }
-.RightButton{
+
+.RightButton {
   position: relative;
 }
 
 
 // Правая кнопка
-.RightButton{}
-.hex_container{
+.RightButton {
+}
+
+.hex_container {
   top: 61px;
   left: -47px;
   position: absolute;
 }
 
-.hexBig{
+.hexBig {
   position: absolute;
   top: -53px;
   left: -71px;
 }
-.hexSmall{
+
+.hexSmall {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .hex {
   position: absolute;
   width: 80px;
@@ -81,34 +90,51 @@
   font-style: italic;
   font-weight: 900;
 }
-.avatar{
+
+.avatar {
 
 }
 
 
-
-.hex_iq_container{
-  top: 200px;
-  left: 200px;
+.hex_iq_container {
+  top: 15px;
+  left: 20px;
   position: absolute;
+  z-index: 2;
 }
-.hex_iq_big{
+
+.hex_iq_text {
+  top: 12px;
+  left: 24px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #cccccc;
+  z-index: 3;
+  font-style: italic;
+}
+
+.hex_iq_big {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 80px;
   width: 80px;
 }
-.hex_iq_small{
+
+.hex_iq_small {
   position: absolute;
   top: -41px;
   left: 64px;
   height: 60px;
   width: 60px;
 }
+
 .hex_iq_text {
   position: absolute;
+  top: 15px;
+  left: 25px;
 }
-.margin_left{
+
+.margin_left {
   margin-left: 35px;
 }

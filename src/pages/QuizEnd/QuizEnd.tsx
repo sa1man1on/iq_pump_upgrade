@@ -1,8 +1,10 @@
 import cls from "./QuizEnd.module.scss";
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
+import {useNavigate} from "react-router-dom";
 
 
 function QuizEnd() {
+    const navigate = useNavigate();
 
     return (
         <div className={cls.PageWrapper}>
@@ -16,11 +18,16 @@ function QuizEnd() {
 
                     <div className={cls.timer}>15:47:03</div>
 
-                    <div className={cls.mw}>А пока, соревнуйтесь в интеллекте с другими пользователями в разделе турниров
+                    <div className={cls.mw}>А пока, соревнуйтесь в интеллекте с другими пользователями в разделе
+                        турниров
                         <span> VS</span>
                     </div>
 
-                    <button className={cls.btn}>Играть</button>
+                    <button
+                        onClick={() => navigate("/tournament_menu")}
+                        className={cls.btn}
+                    >Играть
+                    </button>
 
                 </div>
             </div>
