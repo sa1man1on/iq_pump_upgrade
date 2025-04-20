@@ -2,35 +2,42 @@
   display: flex;
   justify-content: center;
 }
-.prev{
+
+.prev {
   transform: scaleX(-1);
   width: 100px;
-  margin-bottom: 150px;
+  margin-top: 150px;
+  margin-bottom: 300px;
 }
-.next{
+
+.next {
   width: 100px;
-  margin-bottom: 150px;
+  margin-top: 150px;
+  margin-bottom: 300px;
 }
-.image{
-  margin-top: 45px;
+
+.image {
   width: 215px;
 }
-.arrow_right{
 
+.arrow_right {
 }
 
-.arrow_left{
-
+.arrow_left {
 }
-.button{
+
+.button {
   background-color: transparent;
-  &:focus{
-    outline:none;
+
+  &:focus {
+    outline: none;
   }
-  &:hover{
-    border-color:transparent;
+
+  &:hover {
+    border-color: transparent;
   }
 }
-.arrow{
+
+.arrow {
   width: 14px;
 }

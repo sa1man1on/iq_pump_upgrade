@@ -10,10 +10,12 @@ import Profile from "./pages/Profile/Profile.tsx";
 import Transactions from "./pages/Transactions/Transactions.tsx";
 import CreateTask from "./pages/CreateTask/CreateTask.tsx";
 import TaskCreation from "./pages/TaskCreation/TaskCreation.tsx";
-import Tournaments from "./pages/Tournaments/Tournaments.tsx";
+import TournamentMenu from "./pages/TournamentMenu/TournamentMenu.tsx";
 import TournamentCreation from "./pages/TournamentCreation/TournamentCreation.tsx";
 import Tournament from "./pages/Tournament/Tournament.tsx";
 import BuyArtefact from "./pages/BuyArtefact/BuyArtefact.tsx";
+import TournamentQuiz from "./pages/TournamentQuiz/TournamentQuiz.tsx";
+import TournamentAccepted from "./pages/TournamentAccepted/TournamentAccepted.tsx";
 
 
 function App() {
@@ -30,13 +32,15 @@ function App() {
                     <Route path="/transactions" element={<Transactions/>}/>
                     <Route path="/add_task" element={<CreateTask/>}/>
                     <Route path="/create_task" element={<TaskCreation/>}/>
-                    <Route path="/tournament_menu" element={<Tournaments/>}/>
-                    <Route path='/tournament_creation' element={<TournamentCreation/>}/>
-                    {<Route path='/tournament_card' element={<Tournament/>}/>}
-                    {<Route path='/buy_artefact_next' element={<BuyArtefact/>}/>}
-                    {<Route path='/buy_artefact_shield' element={<BuyArtefact/>}/>}
-                    {<Route path='/buy_artefact_heal' element={<BuyArtefact/>}/>}
-                    
+                    <Route path="/tournament_menu" element={<TournamentMenu/>}/>
+                    <Route path='/tournament_create' element={<TournamentCreation/>}/>
+                    {/*<Route path='/tournament' element={<TournamentAccepted/>}/>*/}
+                    <Route path='/buy_artefact_next' element={<BuyArtefact/>}/>
+                    <Route path='/buy_artefact_shield' element={<BuyArtefact/>}/>
+                    <Route path='/buy_artefact_heal' element={<BuyArtefact/>}/>
+                    <Route path='/tournament_running' element={<TournamentQuiz/>}/>
+                    <Route path='/tournament_waiting' element={<Tournament/>}/>
+                    <Route path='/tournament_accepted' element={<TournamentAccepted isTimer={true}/>}/>
                     {/*<Route path="/" element={<QuizWin/>}/>*/}
                     {/*<Route path="/quiz_end" element={<QuizEnd/>}/>*/}
                     {/*<Route path="/" element={<Chests/>}/>*/}

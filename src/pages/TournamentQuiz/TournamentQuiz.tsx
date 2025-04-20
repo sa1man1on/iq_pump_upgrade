@@ -1,14 +1,14 @@
-import cls from "./Quiz.module.scss";
+import cls from "./TournamentQuiz.module.scss";
 import HeaderInfo from "../../components/HeaderInfo/HeaderInfo.tsx";
 import Question from "../../components/Question/Question.tsx";
 import AnswerOptions from "../../components/AnswerOptions/AnswerOptions.tsx";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import Button from "../../components/buttons/Button/Button.tsx";
+import TournamentLayout from "../../layouts/TournamentLayout/TournamentLayout.tsx";
 
 
-function Quiz() {
+function TournamentQuiz() {
 
     const handleClick = () => {
         setIsSubmittedAnswer(prevState => !prevState);
@@ -25,7 +25,8 @@ function Quiz() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isAvatar={true}></GameLayout>
+
+                <TournamentLayout></TournamentLayout>
                 <div className={cls.margin_top}></div>
                 <HeaderInfo/>
                 <div className={cls.wrapper}>
@@ -52,4 +53,4 @@ function Quiz() {
     );
 }
 
-export default Quiz;
+export default TournamentQuiz;

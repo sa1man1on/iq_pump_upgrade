@@ -1,12 +1,15 @@
-.button_cancel{
+.button_cancel {
   background: none;
   border: none;
   outline: none;
   margin-top: 20px;
   margin-bottom: 20px;
-  &:focus{
+  color: #FFFFFF;
+
+  &:focus {
     border: none;
     outline: none;
   }
+
   z-index: 3;
 }

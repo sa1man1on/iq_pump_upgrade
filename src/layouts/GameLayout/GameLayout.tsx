@@ -13,8 +13,6 @@ interface GameLayoutProps {
     isAvatar?: boolean;
     isTransactions?: boolean;
     isTournamentCreation?: boolean;
-    // isTournamentSection?: boolean;
-
 }
 
 const GameLayout: FC<GameLayoutProps> = ({

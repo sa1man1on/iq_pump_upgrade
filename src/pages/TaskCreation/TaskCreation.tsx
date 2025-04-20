@@ -4,7 +4,7 @@ import clsx from "clsx";
 import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import {useNavigate} from "react-router-dom";
 
-
+//TODO -> Варианты ответов как и все поля с ограничением по символам (30) если больше поле красным подсвечиваем и не даем сохранить
 function TaskCreation() {
     const navigate = useNavigate();
     return (

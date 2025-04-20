@@ -1,4 +1,4 @@
-import styles from './Enter.module.scss';
+import cls from './Enter.module.scss';
 
 import {useNavigate} from "react-router-dom";
 
@@ -10,22 +10,22 @@ import Layout from "../../layouts/Layout/Layout.tsx";
 
 export default function Enter() {
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
-        <div className={styles.PageWrapper}>
-            <div className={styles.GameContainer}>
+        <div className={cls.PageWrapper}>
+            <div className={cls.GameContainer}>
 
-                <Layout />
+                <Layout/>
 
-                <div className={styles.logoWrapper}>
+                <div className={cls.logoWrapper}>
                     <Logo></Logo>
                 </div>
 
-                <div className={styles.buttonWrapper}>
+                <div className={cls.buttonWrapper}>
                     <Button onClick={() => navigate('/connect')}>{t('Connect_ERC20')}</Button>
                 </div>
 
             </div>
         </div>
-            );
+    );
 }

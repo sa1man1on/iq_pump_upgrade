@@ -1,6 +1,7 @@
 import cls from "./CreateTask.module.scss"
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import {useNavigate} from "react-router-dom";
+import Button from "../../components/buttons/Button/Button.tsx";
 
 
 function CreateTask() {
@@ -25,13 +26,12 @@ function CreateTask() {
                     IQ PUMP
                 </div>
 
-                <button
-                    className={cls.btn}
+                <Button
                     onClick={() => {
                         navigate("/create_task")
                     }}
                 >Создать
-                </button>
+                </Button>
 
                 <div className={cls.get_consulting_text}>
                     Получить подробную
@@ -48,7 +48,7 @@ function CreateTask() {
 
                         <div className={cls.my_task}>
                             <div className={cls.my_task_text}>
-                                Какая картинка на виде...
+                                Какая картинка на видео...
                             </div>
                             <div className={cls.progress}>
                                 1/18
@@ -57,7 +57,7 @@ function CreateTask() {
 
                         <div className={cls.my_task}>
                             <div className={cls.my_task_text}>
-                                Какая картинка на виде...
+                                Какая картинка на видео...
                             </div>
                             <div className={cls.progress}>
                                 1/18

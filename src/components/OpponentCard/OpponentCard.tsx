@@ -3,10 +3,31 @@ import head_placeholder_2 from "../../assets/head_placeholder_2.png";
 import clsx from "clsx";
 import {useNavigate} from "react-router-dom";
 
-function OpponentCard() {
+interface OpponentCardI {
+    isRunningTournament?: boolean;
+    isAcceptedTournament?: boolean;
+}
+
+function OpponentCard({isAcceptedTournament, isRunningTournament}: OpponentCardI) {
     const navigate = useNavigate();
+    // 1. Считаем целевой маршрут
+    const targetRoute = (() => {
+        if (isRunningTournament) return "/tournament_running";
+        if (isAcceptedTournament) return "/tournament_accepted";
+        return "/tournament_waiting";
+    })();
+
+    const handleClick = () => navigate(targetRoute);
+
     return (
-        <div className={cls.opponent_card} onClick={() => navigate("/tournament_card")}>
+        <div className={
+            clsx(cls.opponent_card,
+                {
+                    [cls.accepted]: isAcceptedTournament,
+                    [cls.running]: isRunningTournament
+
+                })
+        } onClick={handleClick}>
 
             <div className={cls.opponent_card_label}>
                 <div className={cls.opponent_coins}>234 561.34</div>

@@ -1,9 +1,9 @@
 import cls from './BuyArtefact.module.scss';
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import CancelButton from "../../components/buttons/CancelButton/CancelButton.tsx";
-import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import artefact_image from '../../assets/icon_shield_ability.svg'
 import {useNavigate} from "react-router-dom";
+import Button from "../../components/buttons/Button/Button.tsx";
 
 function BuyArtefact() {
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ function BuyArtefact() {
                 </div>
                 <div className={cls.price}>500</div>
                 <div className={cls.button_action_wrapper}>
-                    <ButtonAction>Купить</ButtonAction>
+                    <Button>Купить</Button>
                 </div>
                 <CancelButton
                     onClick={() => navigate('/profile')}

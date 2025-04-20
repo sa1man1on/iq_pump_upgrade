@@ -1,4 +1,4 @@
-.opponent_card{
+.opponent_card {
   z-index: 1;
   width: 150px;
   height: 225px;
@@ -8,29 +8,42 @@
   overflow: hidden;
 
 }
-.opponent_card_label{
+
+.accepted {
+  background-color: #fff;
+  color: #000000;
+}
+
+.running {
+  background-color: #fd0065;
+}
+
+.opponent_card_label {
   width: 100px;
   height: 50px;
   position: absolute;
   top: -25px;
   left: 25px;
   border-radius: 10px;
-  background-color: #868686;
+  background-color: #373737;
 }
-.opponent_coins{
-  font-size: 12px;
+
+.opponent_coins {
+
+  font-size: 14px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 27px;
   color: #00ffff;
 }
-.opponent_image{
+
+.opponent_image {
   display: block;
   margin: 40px auto 0 auto;
   width: 100px;
-  //height: 195px;
 
 }
-.opponent_difficulty{
+
+.opponent_difficulty {
   margin: 10px auto 0 auto;
   display: flex;
   flex-direction: row;
@@ -38,20 +51,26 @@
   height: 7px;
   width: 70px;
 }
-.opponent_difficulty_stage{
+
+.opponent_difficulty_stage {
   width: 22px;
   height: 5px;
   background-color: #606060;
   border-radius: 2px;
 }
-.active{
-   background-color: #00ffff;
- }
 
-.text{
-  font-size: 10px;
+.active {
+  background-color: #00ffff;
 }
 
-.opponent_timer{
+.text {
+  font-size: 12px;
+}
+
+.opponent_timer {
   margin-top: 10px;
+}
+
+.time {
+  font-size: 18px;
 }

@@ -1,15 +1,20 @@
-.wrapper{
+.wrapper {
   padding: 15px;
   border-radius: 5px;
   width: 120px;
   background-color: #333333;
+  font-size: 14px;
+  line-height: 0.99;
 }
-.chosen{
+
+.chosen {
   background-color: #7c7c7c;
 }
-.correct{
+
+.correct {
   background-color: #00fd98;
 }
-.incorrect{
+
+.incorrect {
   background-color: #702d43;
 }

@@ -9,7 +9,7 @@ import {useNavigate} from "react-router-dom";
 
 function TournamentCreation() {
     const navigate = useNavigate();
-    
+
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
@@ -20,9 +20,11 @@ function TournamentCreation() {
                     <TournamentCreationSettings></TournamentCreationSettings>
                     <Timer></Timer>
                     <ButtonAction>Создать</ButtonAction>
+
                     <CancelButton
                         onClick={() => navigate('/add_task')}
                     >отменить</CancelButton>
+
                 </div>
             </div>
         </div>

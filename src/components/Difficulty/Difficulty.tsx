@@ -1,20 +1,30 @@
+import {useState} from 'react';
+import clsx from 'clsx';
 import cls from './Difficulty.module.scss';
-import clsx from "clsx";
 
-interface DifficultyI{
+interface DifficultyI {
     isHorizontal?: boolean;
 }
 
-function Difficulty({isHorizontal}:DifficultyI) {
+function Difficulty({isHorizontal}: DifficultyI) {
+    const [level, setLevel] = useState(2); // уровень от 1 до 3
+
     return (
-        <div className={clsx(cls.wrapper,{
+        <div className={clsx(cls.wrapper, {
             [cls.horizontal]: isHorizontal,
         })}>
-            <div className={cls.opponent_difficulty_stage}></div>
-            <div className={clsx(cls.opponent_difficulty_stage, cls.active)}></div>
-            <div className={clsx(cls.opponent_difficulty_stage, cls.active)}></div>
+            {[0, 1, 2].map((i) => (
+                <div
+                    key={i}
+                    className={clsx(cls.opponent_difficulty_stage, {
+                        [cls.active]: i >= 3 - level,
+                    })}
+                    onClick={() => setLevel(3 - i)}
+                />
+            ))}
         </div>
     );
 }
+
 
 export default Difficulty;

@@ -18,24 +18,28 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.logoWrapper{
+.logoWrapper {
   margin-top: 40px; // тут
 }
-.text{
+
+.text {
   margin: 35px auto auto;
   width: 62%;
   font-size: 16px;
   color: white;
   font-weight: 300;
 }
-.link{display: block;
+
+.link {
+  display: block;
 
   margin-top: 25px;
   font-weight: 300;
   color: #00ffff;
   font-size: 20px;
 }
-.text_down{
+
+.text_down {
   margin: auto;
   margin-top: 15px;
   width: 62%;
@@ -43,17 +47,20 @@
   color: white;
   font-weight: 300;
 }
-.code{
+
+.code {
   margin-top: 10px;
 }
-.alert{
+
+.alert {
   margin: 20px auto auto;
   color: #FF0066;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   width: 190px;
 }
-.buttonWrapper{
+
+.buttonWrapper {
   margin-top: 30px;
   //padding-bottom: 30px;
 }

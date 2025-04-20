@@ -1,12 +1,12 @@
 import cls from './AnswerOptions.module.scss';
-import { useState } from "react";
+import {useState} from "react";
 import AnswerButton from "../buttons/AnswerButton/AnswerButton.tsx";
 
 interface AnswerOptionsProps {
     isSubmittedAnswer: boolean;
 }
 
-function AnswerOptions({ isSubmittedAnswer }: AnswerOptionsProps) {
+function AnswerOptions({isSubmittedAnswer}: AnswerOptionsProps) {
     const [chosenAnswer, setChosenAnswer] = useState<number | null>(null);
     const correctAnswer = 2; // номер правильного ответа (пример)
 
@@ -30,7 +30,7 @@ function AnswerOptions({ isSubmittedAnswer }: AnswerOptionsProps) {
                         }
                         onClick={() => handleClick(item)}
                     >
-                        Вариант {item}
+                        Вариант ответа с большим количеством текста так чтобы было три строки {item}
                     </AnswerButton>
                 ))}
             </div>

@@ -1,25 +1,35 @@
 .PageWrapper {
   width: 100vw;
   height: 100vh;
+  color: white;
   background-color: var(--page-background-color);
+
   display: flex;
   justify-content: center;
+  //align-items: center;
 }
 
 .GameContainer {
-  width: 1920px;
-  background-image: url('./background_brain_extended.png');
+  width: 100vw;
+  padding-bottom: 90px;
+  align-items: center;
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  //background-size: 80% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
-.logoWrapper {
-  margin-top: 40px;
+.wrapper {
+  margin: 0 20px;
 }
 
-.buttonWrapper {
-  margin-top: 360px;
+.margin_top {
+  margin-top: 20px;
+}
+
+.margin_top_layout {
+  margin-top: 110px;
+
 }

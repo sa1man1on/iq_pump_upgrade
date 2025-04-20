@@ -10,6 +10,7 @@ function ControlsPanel() {
             </div>
             <ArtefactsGroup></ArtefactsGroup>
         </div>
-    );}
+    );
+}
 
 export default ControlsPanel;

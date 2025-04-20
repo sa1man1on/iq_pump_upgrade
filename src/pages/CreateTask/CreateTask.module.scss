@@ -85,9 +85,10 @@
 }
 
 .create_task_text {
-  margin: 120px auto 10px auto;
+  margin: 40px auto 10px auto;
   width: 231px;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .numbers {
@@ -100,10 +101,10 @@
 
 .get_consulting_text {
   color: #00ffff;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   width: 230px;
-  font-weight: 100;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .my_task {
@@ -119,6 +120,7 @@
 
 .task_header {
   margin: 10px 0 15px 0;
+  font-size: 18px;
 }
 
 .btn {
@@ -135,15 +137,24 @@
 }
 
 .wrapper_task {
+  font-size: 16px;
   display: flex;
   flex-direction: column;
+  font-weight: 400;
   gap: 10px;
 }
 
 .my_task_text {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 16px;
+
 }
 
 .active_users {
   margin-bottom: 30px;
+}
+
+.progress {
+  font-size: 16px;
+  font-weight: 400;
 }

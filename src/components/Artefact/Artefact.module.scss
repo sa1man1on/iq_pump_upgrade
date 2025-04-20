@@ -8,27 +8,29 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  img.heal{
+  img.heal {
     position: absolute;
-    top: 20px;
-    left: 16px;
-    width: 60%;
+    top: 26px;
+    left: 24px;
+    width: 40%;
   }
-  img.next{
-    position: absolute;
-    top: 27px;
-    left: 18px;
-    width: 60%;
-  }
-  img.shield{
 
+  img.next {
     position: absolute;
-    top: 20px;
-    left: 22px;
-    width: 45%;
+    top: 32px;
+    left: 26px;
+    width: 40%;
+  }
+
+  img.shield {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    width: 35%;
 
   }
 }
-.wrapper.active{
+
+.wrapper.active {
   background-image: url("../../assets/transparent_hexagon_active.svg");
 }
