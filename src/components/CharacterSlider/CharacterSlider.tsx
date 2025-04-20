@@ -12,9 +12,11 @@ const SWIPE_THRESHOLD = 50;
 
 function CharacterSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [dragX, setDragX] = useState(0);                  // текущее смещение картинки
-    const [isAnimating, setIsAnimating] = useState(false);  // для анимации плавного отката
-    const startX = useRef(null);
+    const [dragX, setDragX] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    // ref хранит либо число, либо null
+    const startX = useRef<number | null>(null);
 
     const goPrev = () =>
         setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
@@ -22,26 +24,27 @@ function CharacterSlider() {
     const goNext = () =>
         setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
 
-    const handleTouchStart = e => {
+    /** Пользователь начал свайп */
+    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>): void => {
         startX.current = e.touches[0].clientX;
-        setIsAnimating(false); // отключаем плавность на старте свайпа
+        setIsAnimating(false);
     };
 
-    const handleTouchMove = e => {
+    /** Палец двигается */
+    const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>): void => {
         if (startX.current === null) return;
         const currentX = e.touches[0].clientX;
-        setDragX(currentX - startX.current); // сдвигаем картинку за пальцем
+        setDragX(currentX - startX.current);
     };
 
-    const handleTouchEnd = () => {
+    /** Свайп завершён */
+    const handleTouchEnd = (): void => {
         if (startX.current === null) return;
 
         if (Math.abs(dragX) > SWIPE_THRESHOLD) {
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             dragX < 0 ? goNext() : goPrev();
         }
 
-        // возвращаем на 0 с плавной анимацией
         setDragX(0);
         setIsAnimating(true);
         startX.current = null;

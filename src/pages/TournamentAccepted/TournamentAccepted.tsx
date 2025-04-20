@@ -5,7 +5,7 @@ import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import clsx from "clsx";
 
 interface IN {
-    isTimer?: any;
+    isTimer?: boolean;
 }
 
 function TournamentAccepted({isTimer}: IN) {
