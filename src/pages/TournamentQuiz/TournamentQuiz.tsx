@@ -31,7 +31,7 @@ function TournamentQuiz() {
                 <HeaderInfo/>
                 <div className={cls.wrapper}>
                     <Question/>
-                    <AnswerOptions isSubmittedAnswer={isSubmittedAnswer}/>
+                    <AnswerOptions/>
                     <div className={cls.margin_top}></div>
                     <Button isPUMP={true} onClick={
                         handleClick
