@@ -2,8 +2,10 @@
   position: absolute;
   bottom: 0px;
 }
-.difficult_wrapper{
+
+.difficult_wrapper {
   position: absolute;
   left: -30px;
   top: -130px;
+  z-index: 5;
 }
