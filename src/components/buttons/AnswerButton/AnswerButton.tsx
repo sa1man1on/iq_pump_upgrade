@@ -1,16 +1,17 @@
 import cls from './AnswerButton.module.scss';
 import clsx from "clsx";
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 
 interface AnswerButtonProps {
     children?: ReactNode;
     isChosen?: boolean;
     isCorrect?: boolean;
     onClick?: () => void;
+
 }
 
 function AnswerButton(props: AnswerButtonProps) {
-    const { children, isChosen, isCorrect, onClick } = props;
+    const {children, isChosen, isCorrect, onClick} = props;
 
     return (
         <div

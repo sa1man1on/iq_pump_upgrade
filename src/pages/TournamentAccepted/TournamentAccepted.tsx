@@ -28,7 +28,11 @@ function TournamentAccepted({isTimer}: IN) {
                         </div>
                     </div>
 
-                    <div className={cls.vs_text}>V<span>s</span></div>
+                    <div className={cls.vs_text}>
+                        V
+                        <span>s</span>
+
+                    </div>
 
                     <div className={clsx(cls.avatar_right, cls.avatar)}>
                         <img src={head_placeholder} alt=""/>
@@ -43,7 +47,7 @@ function TournamentAccepted({isTimer}: IN) {
                     </div>
 
                 </div>
-
+                <div className={cls.glow}></div>
 
                 {isTimer &&
                     <div className={cls.opponent_timer}>

@@ -3,10 +3,14 @@ import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import clsx from "clsx";
 import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import {useNavigate} from "react-router-dom";
+import plus_icon from '../../assets/circle_plus.svg'
+import AnswerArea from "../../components/AnswerArea/AnswerArea.tsx";
+
 
 //TODO -> Варианты ответов как и все поля с ограничением по символам (30) если больше поле красным подсвечиваем и не даем сохранить
 function TaskCreation() {
     const navigate = useNavigate();
+
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
@@ -17,17 +21,26 @@ function TaskCreation() {
                 <div className={cls.TaskCreationContainer}>
 
                     <div className={cls.header}>Создания задания</div>
-                    <div className={cls.wrapper_1}>
-                        <div className={cls.top_btns}>
-                            <button className={clsx(cls.gray_thin, cls.btn, cls.photo_video)}>Фото/видео</button>
-                            <button className={clsx(cls.gray_thin, cls.btn, cls.link)}>URL</button>
+
+                    <div className={cls.task_adder}>
+                        <div className={cls.task_adder_header}>
+                            <div className={clsx(cls.item)}>Фото</div>
+                            <div className={clsx(cls.item)}>Видео</div>
+                            <div className={clsx(cls.item, cls.item_active)}>URL</div>
                         </div>
+                        <div className={cls.task_adder_footer}>
 
-                        <input className={clsx(cls.gray_thin, cls.input)} type="text"
-                               placeholder='Ссылка на ваш сайт или пост'/>
+                            <img className={cls.plus_icon} src={plus_icon} alt=""/>
 
-                        <input className={clsx(cls.gray_thin, cls.input, cls.input_big)} type="text"
-                               placeholder='Вопрос (до 100 символов)'/>
+                            <p className={clsx(cls.text, cls.text_top)}>
+                                Добавьте ссылку на вашу социальную сеть или пост в ней
+                            </p>
+
+                            <p className={clsx(cls.text, cls.text_bottom)}>
+                                (Instagram, Telegram, VK, X, TikTok)
+                            </p>
+
+                        </div>
                     </div>
 
                     <div className={cls.lang_container}>
@@ -38,21 +51,41 @@ function TaskCreation() {
                     <div className={cls.answers_container}>
                         <div className={cls.answers_header}>Ответы <br/> (первый верный)</div>
                         <div className={clsx(cls.answers_wrapper)}>
-                            <button className={clsx(cls.input, cls.answer_correct)}>Верный ответ</button>
-                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 2</button>
-                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 3</button>
-                            <button className={clsx(cls.input, cls.answer_not_correct)}>Вариант 4</button>
+                            {/* <textarea*/}
+                            {/*     className={clsx(cls.input, cls.answer_area, cls.correct)}*/}
+                            {/*     placeholder='Верный ответ'*/}
+                            {/*     value={value}*/}
+                            {/*     onChange={handleChange}*/}
+                            {/*     maxLength={30}*/}
+                            {/* />*/}
+                            {/*<textarea*/}
+                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
+                            {/*    placeholder='Вариант 2'*/}
+                            {/*></textarea>*/}
+                            {/*<textarea*/}
+                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
+                            {/*    placeholder='Вариант 3'*/}
+                            {/*></textarea>*/}
+                            {/*<textarea*/}
+                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
+                            {/*    placeholder='Вариант 4'*/}
+                            {/*></textarea>*/}
+                            <AnswerArea isCorrect={true} placeholder='Верный ответ'/>
+                            <AnswerArea isCorrect={false} placeholder='Вариант 2'/>
+                            <AnswerArea placeholder='Вариант 3'/>
+                            <AnswerArea placeholder='Вариант 4'/>
                         </div>
+
                     </div>
 
                     <div className={cls.executions_container}>
                         <div className={cls.executions_header}>Количество исполнений</div>
-                        <input className={clsx(cls.gray_thin, cls.executions_input)} type="text"/>
+                        <input className={clsx(cls.gray_thin, cls.executions_input)} type="number"/>
                     </div>
 
                     <div className={cls.cost_container}>
                         <div className={cls.cost_header}>cтоимость</div>
-                        <div className={cls.cost_amount}>5 234.98</div>
+                        <input className={cls.cost_amount} placeholder='0'></input>
                     </div>
 
                     <div className={cls.end_btn_container}>

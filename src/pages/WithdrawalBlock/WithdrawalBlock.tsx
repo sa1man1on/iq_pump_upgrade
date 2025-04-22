@@ -1,4 +1,5 @@
 import cls from './WithdrawalBlock.module.scss';
+import Button from "../../components/buttons/Button/Button.tsx";
 
 function WithdrawalBlock() {
     return (
@@ -8,8 +9,9 @@ function WithdrawalBlock() {
             <div className={cls.max_min_val}>607,18 - 5467</div>
             <div className={cls.description}>Сумма STT автоматически поступит на ваш счет</div>
             <div className={cls.address}>0hdy98ygg787y4647g78yg5698h</div>
-            <div className={cls.description}>в течение 12 часов</div>
-            <button className={cls.btn}>Подтвердить</button>
+            <Button isWhite={true}>
+                Подтвердить
+            </Button>
 
         </div>
     );

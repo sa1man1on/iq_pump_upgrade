@@ -7,7 +7,7 @@
 
 .label {
   color: #00b8b8;
-  font-size: 12px;
+  font-size: 18px;
   position: relative;
   top: 0px;
   left: 0px;
@@ -16,7 +16,7 @@
 .current_lang {
   color: #b6b6b6;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
   position: relative;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@
 
 .arrow {
   margin-left: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .dropdown {
@@ -42,9 +42,9 @@
 }
 
 .language_item {
-  padding: 2px 4px;
+  padding: 4px 8px;
   //color: #b6b6b6;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }

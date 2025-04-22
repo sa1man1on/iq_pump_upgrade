@@ -2,17 +2,14 @@ import cls from "./Quiz.module.scss";
 import HeaderInfo from "../../components/HeaderInfo/HeaderInfo.tsx";
 import Question from "../../components/Question/Question.tsx";
 import AnswerOptions from "../../components/AnswerOptions/AnswerOptions.tsx";
-import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import Button from "../../components/buttons/Button/Button.tsx";
+import ButtonSkip from "../../components/buttons/ButtonSkip/ButtonSkip.tsx";
 
 
 function Quiz() {
 
-    const handleClick = () => {
-        setIsSubmittedAnswer(prevState => !prevState);
-    };
 
     const navigate = useNavigate();
 
@@ -20,7 +17,6 @@ function Quiz() {
         navigate('/quiz_end')
     }
 
-    const [isSubmittedAnswer, setIsSubmittedAnswer] = useState(false)
 
     return (
         <div className={cls.PageWrapper}>
@@ -30,13 +26,15 @@ function Quiz() {
                 <HeaderInfo/>
                 <div className={cls.wrapper}>
                     <Question/>
-                    <AnswerOptions isSubmittedAnswer={isSubmittedAnswer}/>
+                    <AnswerOptions/>
                     <div className={cls.margin_top}></div>
-                    <Button isPUMP={true} onClick={
-                        handleClick
-                    }>
-                        PUMP
-                    </Button>
+                    <div className={cls.buttons_wrapper}>
+                        <Button isPUMP={true}>
+                            PUMP
+                        </Button>
+                        <ButtonSkip></ButtonSkip>
+                    </div>
+
 
                     <button
                         style={{

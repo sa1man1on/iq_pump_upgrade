@@ -1,11 +1,13 @@
 import cls from './TournamentLayout.module.scss'
 import head_placeholder from '../../assets/head_placeholder.png'
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import up_arrow from '../../assets/up_arrow.svg'
 import {FC} from "react";
 import clsx from "clsx";
 import left_palceholder from "../../assets/green_layout.svg"
 import right_palceholder from "../../assets/1.svg"
+import TokensBet from "../../components/TokensBet/TokensBet.tsx";
+
 interface GameLayoutProps {
     isTournament?: boolean;
 }
@@ -27,10 +29,7 @@ const TournamentLayout: FC<GameLayoutProps> = () => {
 
                 <div className={cls.middle_container}>
                     <img className={cls.up_arrow} src={up_arrow} alt=""/>
-                    <div className={cls.tokens_bet}>
-                        <div className={clsx(cls.bet, cls.small_bet)}>8 300</div>
-                        <div className={clsx(cls.bet, cls.big_bet)}>8 300</div>
-                    </div>
+                    <TokensBet></TokensBet>
                     <div className={cls.timer}>47:03</div>
                 </div>
 

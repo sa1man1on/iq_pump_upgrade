@@ -1,0 +1,44 @@
+.answer_area {
+  resize: none;
+  min-width: 50px;
+
+}
+
+.input {
+  background-color: #732323;
+  border-radius: 6px;
+  color: #fff;
+  padding: 14px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+textarea::placeholder {
+  color: #ffffff; /* или любой другой цвет */
+}
+
+.input_big::placeholder {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+.correct {
+  background-color: #225656;
+}
+
+.limitWarning {
+  font-size: 10px;
+  color: #ff0000;
+}
+
+.answer_area {
+  display: flex;
+  flex-direction: column;
+}

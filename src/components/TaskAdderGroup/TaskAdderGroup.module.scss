@@ -8,20 +8,23 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.sberbank{
+
+.sberbank {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-image: url("../../assets/sberbank.svg");
   background-repeat: no-repeat;
-  left: 15px;
+  left: 20px;
+  top: 10px;
   background-size: 55% 100%;
 }
-.task_add{
+
+.task_add {
   font-weight: 800;
   color: black;
   display: flex;
-  align-items: center;   /* вертикальное выравнивание */
+  align-items: center; /* вертикальное выравнивание */
   justify-content: center; /* горизонтальное выравнивание */
   text-align: center; /* если вдруг многострочный */
 
@@ -34,4 +37,5 @@
   background-repeat: no-repeat;
 
   background-size: 100% 100%;
+  font-size: 20px;
 }

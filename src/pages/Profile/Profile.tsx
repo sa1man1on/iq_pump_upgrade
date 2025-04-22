@@ -11,7 +11,7 @@ function Profile() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isProfile={true}></GameLayout>
+                <GameLayout isTotalAnswersSum={true} isProfile={true}></GameLayout>
                 <div className={cls.wrapper}>
                     <InfoPanel></InfoPanel>
 

@@ -9,7 +9,7 @@
 .GameContainer {
   width: 1920px;
   background-color: #000000;
-
+  overflow-x: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -47,6 +47,7 @@
 }
 
 .input {
+  background-color: #1a1a1a;
   border-radius: 6px;
   padding: 14px;
   text-align: center;
@@ -104,6 +105,14 @@ input::placeholder {
   padding: 20px 35px;
 }
 
+.answer_area {
+  resize: none;
+}
+
+.correct {
+  background-color: #225656;
+}
+
 .executions_header {
   margin-top: 20px;
 }
@@ -111,7 +120,9 @@ input::placeholder {
 .executions_input {
   margin: 15px 0;
   border-radius: 10px;
-  padding: 20px 15px;
+  font-size: 16px;
+  padding: 13px 8px;
+  width: 150px;
 }
 
 .lang_header, .executions_header {
@@ -124,6 +135,18 @@ input::placeholder {
   font-size: 24px;
   margin-top: 15px;
   margin-bottom: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+
+  &::placeholder {
+    color: var(--main-blue);
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
 }
 
 .cost_header {
@@ -137,6 +160,12 @@ input::placeholder {
   font-size: 14px;
   margin: 0 auto;
 }
+
+.limitWarning {
+  color: red;
+  margin-top: 5px;
+}
+
 
 .btn_wrapper {
   margin-top: 20px;
@@ -154,5 +183,57 @@ input::placeholder {
     border: none;
     outline: none;
   }
+}
+
+// task adder component
+
+.task_adder {
+  margin: 0 auto;
+  width: 350px;
+  color: #efefef;
+  font-weight: 300;
+  font-size: 14px;
+  border: #ffffff 3px dashed;
+  border-radius: 5px;
+  background-color: #565656;
+}
+
+.plus_icon {
+  margin-top: 15px;
+  width: 45px;
+}
+
+.task_adder_header {
+  border-bottom: black solid 1px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0px;
+
+}
+
+.task_adder_footer {
+  color: white;
+}
+
+.item {
+}
+
+.item_active {
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.text {
+  margin: 10px 0;
+}
+
+.text_top {
+  margin: 0 auto;
+  width: 220px;
+}
+
+.text_bottom {
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 

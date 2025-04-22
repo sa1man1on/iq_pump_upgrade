@@ -1,0 +1,26 @@
+
+.tokens_bet {
+  color: #00CCCC;
+  font-weight: bold;
+}
+
+.small_bet {
+  width: 200px;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.big_bet {
+  z-index: 2;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  filter: blur(6px);
+}

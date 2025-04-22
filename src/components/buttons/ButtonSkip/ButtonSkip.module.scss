@@ -1,6 +1,6 @@
 .Button {
   padding: 25px 30px;
-  background: #00ffff;
+  background: transparent;
   color: #000;
   border: none;
   outline: none;
@@ -15,14 +15,13 @@
   -webkit-tap-highlight-color: transparent
 }
 
-.white {
-  background: #ffffff;
-}
-
 .isPUMP {
   font-weight: 900;
 }
 
+.svg {
+  width: 35px;
+}
 
 //// анимационные приколюхи
 //.button_container {
