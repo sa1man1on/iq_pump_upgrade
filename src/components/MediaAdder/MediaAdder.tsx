@@ -98,7 +98,7 @@ function MediaAdder() {
                     buttons: [
                         {text: 'Камера', id: 'camera'},
                         {text: 'Галерея', id: 'gallery'},
-                        {text: 'Отмена', type: 'cancel'}
+                        {text: 'Отмена', type: 'cancel', id: 'cancel'}
                     ]
                 }, (buttonId: string) => {
                     if (buttonId === 'camera') {
@@ -123,7 +123,7 @@ function MediaAdder() {
                     buttons: [
                         {text: 'Камера', id: 'camera'},
                         {text: 'Галерея', id: 'gallery'},
-                        {text: 'Отмена', type: 'cancel'}
+                        {text: 'Отмена', type: 'cancel', id: 'cancel'}
                     ]
                 }, (buttonId: string) => {
                     if (buttonId === 'camera') {
