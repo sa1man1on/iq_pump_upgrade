@@ -1,0 +1,125 @@
+// task adder component
+
+.task_adder {
+  margin: 0 auto;
+  //width: 350px;
+  color: #efefef;
+  font-weight: 300;
+  font-size: 14px;
+  border: #ffffff 3px dashed;
+  border-radius: 5px;
+  background-color: #565656;
+}
+
+.plus_icon {
+  margin-top: 15px;
+  width: 45px;
+}
+
+.task_adder_header {
+  border-bottom: black solid 1px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0px;
+}
+
+.task_adder_footer {
+  color: white;
+}
+
+.item {
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.item:hover {
+  color: #c0c0c0;
+}
+
+.item_active {
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.text {
+  margin: 10px 0;
+}
+
+.text_top {
+  margin: 0 auto;
+  width: 220px;
+}
+
+.text_bottom {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.url_input {
+  width: 80%;
+  padding: 8px 12px;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 14px;
+  display: block;
+}
+
+.url_input {
+  width: 80%;
+  padding: 8px 12px;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 14px;
+  display: block;
+  transition: border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--main-blue);
+  }
+}
+
+.url_input_error {
+  border-color: #ff4d4f;
+
+  &:focus {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+  }
+}
+
+.error_message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin: 5px auto;
+  max-width: 80%;
+  text-align: left;
+}
+
+.submit_button {
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(#3498db, 10%);
+  }
+
+  &:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+}

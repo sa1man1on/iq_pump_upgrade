@@ -29,20 +29,14 @@ function Quiz() {
                     <AnswerOptions/>
                     <div className={cls.margin_top}></div>
                     <div className={cls.buttons_wrapper}>
-                        <Button isPUMP={true}>
-                            PUMP
+                        <Button
+                            onClick={QUIZ_END_EMULATION}
+                            isPUMP={true}
+                        >PUMP
                         </Button>
                         <ButtonSkip></ButtonSkip>
                     </div>
 
-
-                    <button
-                        style={{
-                            display: "block",
-                        }}
-                        onClick={QUIZ_END_EMULATION}>
-                        пропустить
-                    </button>
 
                 </div>
             </div>

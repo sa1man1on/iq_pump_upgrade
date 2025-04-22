@@ -11,6 +11,9 @@ function QuizEnd() {
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
                 <GameLayout isAvatar={true}></GameLayout>
+
+                {/*<div className={cls.glow}></div>*/}
+
                 <div className={cls.QuizEndWrapper}>
 
                     <div className={cls.textnew}>

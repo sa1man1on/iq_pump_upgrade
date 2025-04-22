@@ -23,7 +23,7 @@
     height: 250px;
     transform: translate(-50%, -90%);
     pointer-events: none;
-    background: radial-gradient(circle, rgb(0, 255, 255) 10%, transparent 120%);
+    //background: radial-gradient(circle, rgb(0, 255, 255) 10%, transparent 120%);
     filter: blur(53px);
   }
 }
@@ -35,9 +35,18 @@
 
 .textnew {
   position: relative;
-  margin-top: 145px;
+  margin-top: 50px;
   font-size: 16px;
   z-index: 3;
+}
+
+.glow {
+  background: radial-gradient(circle, rgb(0, 255, 255) 10%, transparent 120%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  
 }
 
 .timer {

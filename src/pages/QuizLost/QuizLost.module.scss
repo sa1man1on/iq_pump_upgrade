@@ -36,7 +36,7 @@
   width: 457px;
   height: 47px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgb(0, 255, 255) -17%, transparent 31%);
+  background: radial-gradient(circle, rgb(253,0,101) -17%, transparent 31%);
   pointer-events: none;
   filter: blur(11px);
 }
@@ -53,7 +53,7 @@
 
 .background_letters {
   position: absolute;
-  color: aqua;
+  color: #fd0065;
   filter: blur(9px);
   top: -7%;
   left: 50%;
@@ -69,8 +69,8 @@
   font-size: 16px;
   color: black;
   font-weight: 900;
-  background-color: #00CCCC;
-  box-shadow: 0 0 71px 8px #00CCCC;
+  background-color: #fd0065;
+  box-shadow: 0 0 71px 8px #fd0065;
 }
 
 .btn_wrapper {

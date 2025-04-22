@@ -1,6 +1,6 @@
 import cls from './TournamentLayout.module.scss'
 import head_placeholder from '../../assets/head_placeholder.png'
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
 import up_arrow from '../../assets/up_arrow.svg'
 import {FC} from "react";
 import clsx from "clsx";
@@ -13,7 +13,7 @@ interface GameLayoutProps {
 }
 
 const TournamentLayout: FC<GameLayoutProps> = () => {
-
+    const navigate = useNavigate()
     return (
         <div>
             <div className={cls.LayoutWrapper}>
@@ -28,7 +28,11 @@ const TournamentLayout: FC<GameLayoutProps> = () => {
                 </div>
 
                 <div className={cls.middle_container}>
-                    <img className={cls.up_arrow} src={up_arrow} alt=""/>
+                    <img
+                        onClick={() => {
+                            navigate('/profile')
+                        }}
+                        className={cls.up_arrow} src={up_arrow} alt=""/>
                     <TokensBet></TokensBet>
                     <div className={cls.timer}>47:03</div>
                 </div>

@@ -3,13 +3,26 @@ import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import clsx from "clsx";
 import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import {useNavigate} from "react-router-dom";
-import plus_icon from '../../assets/circle_plus.svg'
 import AnswerArea from "../../components/AnswerArea/AnswerArea.tsx";
-
+import {useState} from 'react';
+import MediaAdder from "../../components/MediaAdder/MediaAdder.tsx";
 
 //TODO -> Варианты ответов как и все поля с ограничением по символам (30) если больше поле красным подсвечиваем и не даем сохранить
 function TaskCreation() {
     const navigate = useNavigate();
+    const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState('Русский');
+
+    const languages = ['Русский', 'English', 'Español', 'Français', 'Deutsch'];
+
+    const toggleLanguageDropdown = () => {
+        setShowLanguageDropdown(!showLanguageDropdown);
+    };
+
+    const selectLanguage = (language: string) => {
+        setSelectedLanguage(language);
+        setShowLanguageDropdown(false);
+    };
 
     return (
         <div className={cls.PageWrapper}>
@@ -22,54 +35,36 @@ function TaskCreation() {
 
                     <div className={cls.header}>Создания задания</div>
 
-                    <div className={cls.task_adder}>
-                        <div className={cls.task_adder_header}>
-                            <div className={clsx(cls.item)}>Фото</div>
-                            <div className={clsx(cls.item)}>Видео</div>
-                            <div className={clsx(cls.item, cls.item_active)}>URL</div>
-                        </div>
-                        <div className={cls.task_adder_footer}>
-
-                            <img className={cls.plus_icon} src={plus_icon} alt=""/>
-
-                            <p className={clsx(cls.text, cls.text_top)}>
-                                Добавьте ссылку на вашу социальную сеть или пост в ней
-                            </p>
-
-                            <p className={clsx(cls.text, cls.text_bottom)}>
-                                (Instagram, Telegram, VK, X, TikTok)
-                            </p>
-
-                        </div>
-                    </div>
+                    <MediaAdder></MediaAdder>
 
                     <div className={cls.lang_container}>
                         <div className={cls.lang_header}>Язык</div>
-                        <div className={clsx(cls.gray_thin, cls.lang_picker)}>Русский</div>
+                        <div className={cls.lang_dropdown_container}>
+                            <div
+                                className={clsx(cls.gray_thin, cls.lang_picker)}
+                                onClick={toggleLanguageDropdown}
+                            >
+                                {selectedLanguage} ▼
+                            </div>
+                            {showLanguageDropdown && (
+                                <div className={cls.lang_dropdown}>
+                                    {languages.map((language, index) => (
+                                        <div
+                                            key={index}
+                                            className={cls.lang_option}
+                                            onClick={() => selectLanguage(language)}
+                                        >
+                                            {language}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     <div className={cls.answers_container}>
                         <div className={cls.answers_header}>Ответы <br/> (первый верный)</div>
                         <div className={clsx(cls.answers_wrapper)}>
-                            {/* <textarea*/}
-                            {/*     className={clsx(cls.input, cls.answer_area, cls.correct)}*/}
-                            {/*     placeholder='Верный ответ'*/}
-                            {/*     value={value}*/}
-                            {/*     onChange={handleChange}*/}
-                            {/*     maxLength={30}*/}
-                            {/* />*/}
-                            {/*<textarea*/}
-                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
-                            {/*    placeholder='Вариант 2'*/}
-                            {/*></textarea>*/}
-                            {/*<textarea*/}
-                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
-                            {/*    placeholder='Вариант 3'*/}
-                            {/*></textarea>*/}
-                            {/*<textarea*/}
-                            {/*    className={clsx(cls.input, cls.answer_area)}*/}
-                            {/*    placeholder='Вариант 4'*/}
-                            {/*></textarea>*/}
                             <AnswerArea isCorrect={true} placeholder='Верный ответ'/>
                             <AnswerArea isCorrect={false} placeholder='Вариант 2'/>
                             <AnswerArea placeholder='Вариант 3'/>

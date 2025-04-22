@@ -1,12 +1,13 @@
 .opponent_card {
   z-index: 1;
-  width: 150px;
-  height: 225px;
+  width: 100%; /* Изменено на 100% для адаптивности */
+  max-width: 150px; /* Добавлен максимальный размер, равный текущему */
+  height: auto; /* Изменено для сохранения пропорций */
+  aspect-ratio: 150 / 225; /* Сохраняем пропорции 150x225 */
   position: relative;
   border-radius: 10px;
   background-color: #000000;
   overflow: hidden;
-
 }
 
 .accepted {
@@ -19,42 +20,41 @@
 }
 
 .opponent_card_label {
-  width: 100px;
-  height: 50px;
+  width: 66.67%; /* 100px / 150px = 66.67% от ширины карточки */
+  height: calc(50 / 225 * 100%); /* 50px относительно высоты карточки */
   position: absolute;
-  top: -25px;
-  left: 25px;
+  top: calc(-25 / 225 * 100%); /* -25px относительно высоты карточки */
+  left: 16.67%; /* 25px / 150px = 16.67% от ширины карточки */
   border-radius: 10px;
   background-color: #373737;
 }
 
 .opponent_coins {
-
-  font-size: 14px;
+  font-size: clamp(10px, 3vw, 14px); /* Адаптивный размер шрифта */
   font-weight: 600;
-  margin-top: 27px;
+  margin-top: 25%; /* 27px относительно высоты лейбла */
   color: #00ffff;
 }
 
 .opponent_image {
   display: block;
-  margin: 40px auto 0 auto;
-  width: 100px;
-
+  margin: calc(40 / 225 * 100%) auto 0 auto; /* 40px относительно высоты карточки */
+  width: 66.67%; /* 100px / 150px = 66.67% от ширины карточки */
+  max-width: 100px; /* Максимальный размер картинки */
 }
 
 .opponent_difficulty {
-  margin: 10px auto 0 auto;
+  margin: calc(10 / 225 * 100%) auto 0 auto; /* 10px относительно высоты карточки */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 7px;
-  width: 70px;
+  height: calc(7 / 225 * 100%); /* 7px относительно высоты карточки */
+  width: 46.67%; /* 70px / 150px = 46.67% от ширины карточки */
 }
 
 .opponent_difficulty_stage {
-  width: 22px;
-  height: 5px;
+  width: 31.43%; /* 22px / 70px = 31.43% от ширины контейнера */
+  height: 71.43%; /* 5px / 7px = 71.43% от высоты контейнера */
   background-color: #606060;
   border-radius: 2px;
 }
@@ -64,13 +64,13 @@
 }
 
 .text {
-  font-size: 12px;
+  font-size: clamp(8px, 2.5vw, 12px); /* Адаптивный размер шрифта */
 }
 
 .opponent_timer {
-  margin-top: 10px;
+  margin-top: calc(10 / 225 * 100%); /* 10px относительно высоты карточки */
 }
 
 .time {
-  font-size: 18px;
+  font-size: clamp(12px, 3.5vw, 18px); /* Адаптивный размер шрифта */
 }

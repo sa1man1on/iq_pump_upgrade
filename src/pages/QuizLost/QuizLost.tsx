@@ -1,8 +1,8 @@
-import cls from "./QuizWin.module.scss";
+import cls from "./QuizLost.module.scss";
 import TournamentLayout from "../../layouts/TournamentLayout/TournamentLayout.tsx";
 import Button from "../../components/buttons/Button/Button.tsx";
 
-function QuizWin() {
+function QuizLost() {
 
 
     return (
@@ -15,7 +15,7 @@ function QuizWin() {
                         <div className={cls.glow}></div>
                     </div>
                     <div className={cls.win}>
-                        WIN
+                        LOST
                     </div>
 
                     <div className={cls.background_letters}>
@@ -23,10 +23,14 @@ function QuizWin() {
                             YOU
                         </div>
                         <div className={cls.win}>
-                            WIN
+                            LOST
                         </div>
                     </div>
-                    <div className={cls.btn_wrapper}><Button>OK</Button></div>
+                    <div className={cls.btn_wrapper}>
+                        <Button
+                            isPink={true}
+                        >OK</Button>
+                    </div>
 
 
                 </div>
@@ -35,4 +39,4 @@ function QuizWin() {
     );
 }
 
-export default QuizWin;
+export default QuizLost;

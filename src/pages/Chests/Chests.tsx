@@ -10,7 +10,7 @@ function Chests() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTotalAnswersSum={true}></GameLayout>
+                <GameLayout isProfile={true} isTotalAnswersSum={true}></GameLayout>
                 <div className={cls.wrapper}>
                     <div className={cls.chests_container}>
                         <img alt='' src={chest_1} className={clsx(cls.chest_1, cls.chest)}></img>

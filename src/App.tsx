@@ -16,6 +16,9 @@ import Tournament from "./pages/Tournament/Tournament.tsx";
 import BuyArtefact from "./pages/BuyArtefact/BuyArtefact.tsx";
 import TournamentQuiz from "./pages/TournamentQuiz/TournamentQuiz.tsx";
 import TournamentAccepted from "./pages/TournamentAccepted/TournamentAccepted.tsx";
+import Chests from "./pages/Chests/Chests.tsx";
+import QuizWin from "./pages/QuizWin/QuizWin.tsx";
+import QuizLost from "./pages/QuizLost/QuizLost.tsx";
 
 
 function App() {
@@ -41,10 +44,14 @@ function App() {
                     <Route path='/tournament_running' element={<TournamentQuiz/>}/>
                     <Route path='/tournament_waiting' element={<Tournament/>}/>
                     <Route path='/tournament_accepted' element={<TournamentAccepted isTimer={true}/>}/>
-                    {/*<Route path="/" element={<QuizWin/>}/>*/}
+
+                    <Route path='/chests' element={<Chests/>}/>
+                    <Route path='/win' element={<QuizWin/>}/>
+                    <Route path='/lost' element={<QuizLost/>}/>
+                    {/*<Route path="/" element={<QuizLost/>}/>*/}
                     {/*<Route path="/quiz_end" element={<QuizEnd/>}/>*/}
                     {/*<Route path="/" element={<Chests/>}/>*/}
-                    {/*<Route path="/" element={<QuizWin/>}/>*/}
+                    {/*<Route path="/" element={<QuizLost/>}/>*/}
                 </Routes>
             </BrowserRouter>
         </div>

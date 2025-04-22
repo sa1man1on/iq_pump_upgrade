@@ -8,9 +8,10 @@ interface IButton {
     onClick?: () => void;
     isPUMP?: boolean;
     isWhite?: boolean;
+    isPink?: boolean;
 }
 
-function Button({children, onClick, isWhite}: IButton) {
+function Button({children, onClick, isWhite, isPink}: IButton) {
 
     return (
 
@@ -22,6 +23,7 @@ function Button({children, onClick, isWhite}: IButton) {
                 {
                     [cls.isPUMP]: true,
                     [cls.white]: isWhite,
+                    [cls.pink]: isPink,
                 })}
         >{children}
         </button>);

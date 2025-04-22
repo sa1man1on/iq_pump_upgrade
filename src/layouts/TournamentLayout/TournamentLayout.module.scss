@@ -1,4 +1,4 @@
-.LayoutWrapper{
+.LayoutWrapper {
   position: relative;
   color: white;
   display: flex;
@@ -8,20 +8,24 @@
   font-weight: 200;
   padding-top: 15px;
 }
-.backArrow{
+
+.backArrow {
   outline: none;
   background: none;
   border: none;
   margin-top: 33px;
   height: 22.25px;
 }
-.LeftOpponent{
+
+.LeftOpponent {
 
 }
-.reward{
+
+.reward {
   width: 120px;
 }
-.reward_amount{
+
+.reward_amount {
   font-size: 20px;
   color: black;
   font-weight: 600;
@@ -29,11 +33,12 @@
   top: 10%;
   left: 30px;
 }
-.up_arrow{
+
+.up_arrow {
   height: 9.25px;
 }
 
-.glow_green{
+.glow_green {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -45,7 +50,7 @@
   border-top-left-radius: 0px;
 }
 
-.glow_pink{
+.glow_pink {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -57,11 +62,12 @@
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
-.reward_left{
+
+.reward_left {
 
 }
 
-.totalRightAnswers{
+.totalRightAnswers {
   color: #E2E200;
   font-family: "Teko", sans-serif;
   font-size: 20px;
@@ -69,29 +75,34 @@
   top: 3px;
   left: -63px;
 }
-.RightButton{
+
+.RightButton {
   position: relative;
 }
 
 
 // Правая кнопка
-.RightButton{}
-.hex_container{
+.RightButton {
+}
+
+.hex_container {
   top: 61px;
   left: -47px;
   position: absolute;
 }
 
-.hexBig{
+.hexBig {
   position: absolute;
   top: -53px;
   left: -71px;
 }
-.hexSmall{
+
+.hexSmall {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .hex {
   position: absolute;
   width: 80px;
@@ -113,60 +124,69 @@
   font-style: italic;
   font-weight: 900;
 }
-.avatar{
+
+.avatar {
 
 }
 
 
-
-.hex_iq_container{
+.hex_iq_container {
   top: 200px;
   left: 200px;
   position: absolute;
 }
-.hex_iq_big{
+
+.hex_iq_big {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 80px;
   width: 80px;
 }
-.hex_iq_small{
+
+.hex_iq_small {
   position: absolute;
   top: -41px;
   left: 64px;
   height: 60px;
   width: 60px;
 }
+
 .hex_iq_text {
   position: absolute;
 }
-.head_img{
+
+.head_img {
   width: 110px;
 }
-.head_img_right{
+
+.head_img_right {
   transform: rotateY(180deg);
 }
-.timer{
+
+.timer {
   font-size: 38px;
   font-family: 'Teko', sans-serif;
   color: yellow;
-  margin-top: 70px;
+  margin-top: 85px;
 }
-.bet{
+
+.bet {
   position: relative;
   color: #00CCCC;
   font-size: 32px;
   font-weight: 900;
 }
-.small_bet{
+
+.small_bet {
   z-index: 3;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.big_bet{
+
+.big_bet {
   z-index: 2;
   position: absolute;
   top: 50%;
@@ -175,7 +195,8 @@
   font-size: 64px;
   filter: blur(6px);
 }
-.reward_amount_right{
+
+.reward_amount_right {
   position: absolute;
   right: 30px;
   top: 3px;
@@ -184,6 +205,7 @@
   font-weight: 600;
 
 }
-.reward_container{
+
+.reward_container {
   position: relative;
 }
