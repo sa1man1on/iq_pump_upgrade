@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import cls from './CodeInput.module.scss';
 
 export default function CodeInput() {
     const [code, setCode] = useState('');
 
-    const handleChange = (e:any) => {
+    const handleChange = (e: any) => {
         // Разрешаем только цифры и максимум 6 символов
         const value = e.target.value.replace(/\D/g, '').slice(0, 6);
         setCode(value);
@@ -13,7 +13,7 @@ export default function CodeInput() {
     return (
         <input
             className={cls.codeInput}
-            type="text"
+            type="number"
             value={code}
             onChange={handleChange}
             placeholder=""
