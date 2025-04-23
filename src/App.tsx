@@ -37,7 +37,6 @@ function App() {
                     <Route path="/create_task" element={<TaskCreation/>}/>
                     <Route path="/tournament_menu" element={<TournamentMenu/>}/>
                     <Route path='/tournament_create' element={<TournamentCreation/>}/>
-                    {/*<Route path='/tournament' element={<TournamentAccepted/>}/>*/}
                     <Route path='/buy_artefact_next' element={<BuyArtefact/>}/>
                     <Route path='/buy_artefact_shield' element={<BuyArtefact/>}/>
                     <Route path='/buy_artefact_heal' element={<BuyArtefact/>}/>
@@ -45,6 +44,7 @@ function App() {
                     <Route path='/tournament_waiting' element={<Tournament/>}/>
                     <Route path='/tournament_accepted' element={<TournamentAccepted isTimer={true}/>}/>
 
+                    
                     <Route path='/chests' element={<Chests/>}/>
                     <Route path='/win' element={<QuizWin/>}/>
                     <Route path='/lost' element={<QuizLost/>}/>

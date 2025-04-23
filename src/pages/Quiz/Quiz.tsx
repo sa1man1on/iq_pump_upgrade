@@ -36,8 +36,6 @@ function Quiz() {
                         </Button>
                         <ButtonSkip></ButtonSkip>
                     </div>
-
-
                 </div>
             </div>
         </div>

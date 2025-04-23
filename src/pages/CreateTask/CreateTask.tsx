@@ -11,7 +11,7 @@ function CreateTask() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout isTotalAnswersSum={true}/>
+                <GameLayout isProfile={true} isTotalAnswersSum={true}/>
                 <div className={cls.create_task_text}>
                     Создайте собственное задание со ссылкой на ваш сайт или страничку в соцсети и его увидят и выполнят
                 </div>
