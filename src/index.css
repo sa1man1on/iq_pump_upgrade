@@ -13,10 +13,14 @@
     -moz-osx-font-smoothing: grayscale;
     --main-blue: #00CCCC;
 
-    --font-main: '';
-    --font-numbers_2: "Exo 2", sans-serif;
+    /*--font-main: '';*/
+    /*--font-numbers_2: "Exo 2", sans-serif;*/
+
+    /*для цифр*/
     --font-numbers: "Rubik", sans-serif;
-    font-family-ibm: "IBM Plex Mono", monospace;
+
+
+    /*font-family-ibm: "IBM Plex Mono", monospace; */
     /*font-family: ;*/
     /*font-family: "Exo 2", sans-serif;*/
 }

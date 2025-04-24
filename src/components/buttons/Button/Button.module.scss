@@ -7,6 +7,9 @@
   cursor: pointer;
   border-radius: 100px;
   font-size: 14px;
+  width: 150px;
+  height: 83px;
+  z-index: 3;
 
   &:focus {
     outline: none;
@@ -17,10 +20,13 @@
 
 .white {
   background: #ffffff;
+  width: 150px;
 }
+
 
 .isPUMP {
   font-weight: 900;
+
 }
 
 .pink {

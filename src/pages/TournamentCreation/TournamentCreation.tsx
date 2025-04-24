@@ -1,10 +1,10 @@
 import cls from "./TournamentCreation.module.scss"
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import TournamentCreationSettings from "../../components/TournamentCreationSettings/TournamentCreationSettings.tsx";
-import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import CancelButton from "../../components/buttons/CancelButton/CancelButton.tsx";
 import Timer from "../../components/Timer/Timer.tsx";
 import {useNavigate} from "react-router-dom";
+import Button from "../../components/buttons/Button/Button.tsx";
 
 
 function TournamentCreation() {
@@ -19,12 +19,16 @@ function TournamentCreation() {
                     </div>
                     <TournamentCreationSettings></TournamentCreationSettings>
                     <Timer></Timer>
-                    <ButtonAction>Создать</ButtonAction>
+
+                    <div className={cls.margin_top}>
+                        <Button isPUMP={true}>Создать</Button>
+                    </div>
 
                     <CancelButton
                         onClick={() => navigate('/add_task')}
                     >отменить</CancelButton>
 
+                    {/*Почему эту кнопку Button не видно */}
                 </div>
             </div>
         </div>

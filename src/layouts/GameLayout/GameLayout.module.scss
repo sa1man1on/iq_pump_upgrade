@@ -40,11 +40,11 @@
   //font-family: "IBM Plex Mono", monospace;
   font-family: "Teko", sans-serif;
 
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 500;
   position: absolute;
   top: 3px;
-  left: -63px;
+  left: -67px;
 }
 
 .RightButton {
@@ -112,10 +112,12 @@
   top: 12px;
   left: 24px;
   font-size: 32px;
-  font-weight: bold;
   color: #cccccc;
   z-index: 3;
+
   font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
 }
 
 .hex_iq_big {

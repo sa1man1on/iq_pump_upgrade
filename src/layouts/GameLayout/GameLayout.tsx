@@ -56,7 +56,7 @@ const GameLayout: FC<GameLayoutProps> = ({
                             onClick={() => navigate('/quiz')}
                             className={clsx(cls.hex_iq_container)}>
                             <img className={cls.hex_iq_small} src={hexagon_iq} alt=""/>
-                            <div className={cls.hex_iq_text}>IQ</div>
+                            <p className={cls.hex_iq_text}>IQ</p>
                             <img className={cls.hex_iq_big} alt="" src={hexagon_iq}/>
                         </div>
                     }

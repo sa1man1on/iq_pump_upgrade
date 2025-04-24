@@ -2,8 +2,8 @@ import {useState} from 'react';
 import cls from './LangSwitcher.module.scss';
 
 // фиксируем набор поддерживаемых языков в виде union‑типа
-type Language = 'English' | 'Spanish' | 'French' | 'German';
-const languages: Language[] = ['English', 'Spanish', 'French', 'German'];
+type Language = 'English' | 'Русский';
+const languages: Language[] = ['English', 'Русский'];
 
 function LangSwitcher() {
     const [isOpen, setIsOpen] = useState(false);

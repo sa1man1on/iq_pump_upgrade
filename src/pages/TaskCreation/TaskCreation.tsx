@@ -1,11 +1,11 @@
 import cls from "./TaskCreation.module.scss"
 import GameLayout from "../../layouts/GameLayout/GameLayout.tsx";
 import clsx from "clsx";
-import ButtonAction from "../../components/buttons/ButtonAction/ButtonAction.tsx";
 import {useNavigate} from "react-router-dom";
 import AnswerArea from "../../components/AnswerArea/AnswerArea.tsx";
 import {useState} from 'react';
 import MediaAdder from "../../components/MediaAdder/MediaAdder.tsx";
+import Button from "../../components/buttons/Button/Button.tsx";
 
 //TODO -> Варианты ответов как и все поля с ограничением по символам (30) если больше поле красным подсвечиваем и не даем сохранить
 function TaskCreation() {
@@ -13,7 +13,7 @@ function TaskCreation() {
     const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState('Русский');
 
-    const languages = ['Русский', 'English', 'Español', 'Français', 'Deutsch'];
+    const languages = ['Русский', 'English'];
 
     const toggleLanguageDropdown = () => {
         setShowLanguageDropdown(!showLanguageDropdown);
@@ -80,13 +80,14 @@ function TaskCreation() {
 
                     <div className={cls.cost_container}>
                         <div className={cls.cost_header}>cтоимость</div>
-                        <input className={cls.cost_amount} placeholder='0'></input>
+                        <div className={cls.cost_amount}>500</div>
+                        {/*    Сделать тут логику умножения количества показов на 500*/}
                     </div>
 
                     <div className={cls.end_btn_container}>
                         <div className={cls.warning}>Не все обязательные поля заполнены</div>
                         <div className={cls.btn_wrapper}>
-                            <ButtonAction>Оплатить с <br/> баланса</ButtonAction>
+                            <Button>Оплатить с <br/> баланса</Button>
                         </div>
                     </div>
 
