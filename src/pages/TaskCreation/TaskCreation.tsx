@@ -12,7 +12,8 @@ function TaskCreation() {
     const navigate = useNavigate();
     const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState('Русский');
-
+    const [executorValue, setExecutorValue] = useState(0);
+    const [priceValue, setpriceValue] = useState(0);
     const languages = ['Русский', 'English'];
 
     const toggleLanguageDropdown = () => {
@@ -75,12 +76,19 @@ function TaskCreation() {
 
                     <div className={cls.executions_container}>
                         <div className={cls.executions_header}>Количество исполнений</div>
-                        <input className={clsx(cls.gray_thin, cls.executions_input)} type="number"/>
+                        <input
+                            value={executorValue}
+                            onChange={(e) => {
+                                const value = Number(e.target.value);
+                                setExecutorValue(value);
+                                setpriceValue(value * 500);
+                            }}
+                            className={clsx(cls.gray_thin, cls.executions_input)} type="number"/>
                     </div>
 
                     <div className={cls.cost_container}>
                         <div className={cls.cost_header}>cтоимость</div>
-                        <div className={cls.cost_amount}>500</div>
+                        <div className={cls.cost_amount}>{priceValue}</div>
                         {/*    Сделать тут логику умножения количества показов на 500*/}
                     </div>
 

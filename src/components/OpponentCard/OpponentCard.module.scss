@@ -34,7 +34,7 @@
 }
 
 .opponent_coins {
-  font-size: clamp(10px, 3vw, 14px); /* Адаптивный размер шрифта */
+  font-size: 14px; /* Адаптивный размер шрифта */
   font-weight: 600;
   margin-top: 25%; /* 27px относительно высоты лейбла */
   color: #00ffff;
@@ -69,7 +69,7 @@
 }
 
 .text {
-  font-size: clamp(14px, 2.5vw, 18px); /* Адаптивный размер шрифта */
+  font-size: 18px; /* Адаптивный размер шрифта */
 }
 
 .opponent_timer {
@@ -77,5 +77,6 @@
 }
 
 .time {
-  font-size: clamp(16px, 3.5vw, 20px); /* Адаптивный размер шрифта */
+  font-weight: 600;
+  font-size: 18px; /* Адаптивный размер шрифта */
 }
