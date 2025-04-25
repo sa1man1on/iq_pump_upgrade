@@ -1,9 +1,15 @@
-.timer_wrapper{
+.timer_wrapper {
   z-index: 3;
 }
-.number_container{
+
+.start_from {
+  font-size: 16px;
+}
+
+.number_container {
   border-radius: 10px;
-  background: #555555;
+
+  background: rgba(128, 128, 128, 0.7);;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -14,17 +20,18 @@
   font-weight: 600;
 }
 
-.cell{
+.cell {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.timer_body{
+.timer_body {
   display: flex;
   align-items: center;
 }
-.dots{
+
+.dots {
   height: 85px;
   font-size: 40px;
   padding: 0px 14px;

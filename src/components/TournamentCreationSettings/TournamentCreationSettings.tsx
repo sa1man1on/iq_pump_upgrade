@@ -10,7 +10,6 @@ function TournamentCreationSettings() {
 
             <div className={cls.header_image_wrapper}>
                 <HeadImage/>
-
             </div>
 
 

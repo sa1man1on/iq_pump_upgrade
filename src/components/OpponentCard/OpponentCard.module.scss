@@ -2,12 +2,16 @@
   z-index: 1;
   width: 100%; /* Изменено на 100% для адаптивности */
   max-width: 150px; /* Добавлен максимальный размер, равный текущему */
-  height: auto; /* Изменено для сохранения пропорций */
-  aspect-ratio: 150 / 225; /* Сохраняем пропорции 150x225 */
+  height: 245px; /* Изменено для сохранения пропорций */
+  //aspect-ratio: 150 / 225; /* Сохраняем пропорции 150x225 */
   position: relative;
   border-radius: 10px;
   background-color: #000000;
   overflow: hidden;
+  padding: 45px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .accepted {
@@ -38,9 +42,10 @@
 
 .opponent_image {
   display: block;
-  margin: calc(65 / 225 * 100%) auto 0 auto; /* 40px относительно высоты карточки */
-  width: 66.67%; /* 100px / 150px = 66.67% от ширины карточки */
-  max-width: 100px; /* Максимальный размер картинки */
+  //margin: calc(65 / 225 * 100%) 16px 0 16px; /* 40px относительно высоты карточки */
+  width: 100%; /* 100px / 150px = 66.67% от ширины карточки */
+  max-width: 115px; /* Максимальный размер картинки */
+  //margin: 0 auto;
 }
 
 .opponent_difficulty {
@@ -64,7 +69,7 @@
 }
 
 .text {
-  font-size: clamp(8px, 2.5vw, 12px); /* Адаптивный размер шрифта */
+  font-size: clamp(14px, 2.5vw, 18px); /* Адаптивный размер шрифта */
 }
 
 .opponent_timer {
@@ -72,5 +77,5 @@
 }
 
 .time {
-  font-size: clamp(12px, 3.5vw, 18px); /* Адаптивный размер шрифта */
+  font-size: clamp(16px, 3.5vw, 20px); /* Адаптивный размер шрифта */
 }
