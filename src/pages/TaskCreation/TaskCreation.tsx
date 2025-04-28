@@ -89,7 +89,6 @@ function TaskCreation() {
                     <div className={cls.cost_container}>
                         <div className={cls.cost_header}>cтоимость</div>
                         <div className={cls.cost_amount}>{priceValue}</div>
-                        {/*    Сделать тут логику умножения количества показов на 500*/}
                     </div>
 
                     <div className={cls.end_btn_container}>

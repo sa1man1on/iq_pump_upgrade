@@ -1,16 +1,37 @@
 import cls from './Enter.module.scss';
 
 import {useNavigate} from "react-router-dom";
-
-import {useTranslation} from "react-i18next";
+import {useWalletProvider} from "../../contexts/wallet-context.tsx";
+import {useAppKit} from "@reown/appkit/react";
+import {useState} from "react";
 import Button from "../../components/buttons/Button/Button.tsx";
 import Logo from "../../components/Logo/Logo.tsx";
 import Layout from "../../layouts/Layout/Layout.tsx";
 
-
 export default function Enter() {
     const navigate = useNavigate();
-    const {t} = useTranslation();
+
+
+    const {open} = useAppKit();
+    const provider = useWalletProvider();
+    const [address, setAddress] = useState<string>();
+
+    const handleConnect = async () => {
+        await open();
+
+        if (!provider) return;
+
+        const signer = await provider.getSigner();
+
+        const addr = await signer.getAddress();
+
+        if (addr) {
+            setAddress(addr);
+            console.log('Игрок авторизован как', addr);
+        }
+
+    };
+
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
@@ -22,8 +43,13 @@ export default function Enter() {
                 </div>
 
                 <div className={cls.buttonWrapper}>
-                    <Button onClick={() => navigate('/connect')}>{t('Connect_ERC20')}</Button>
+                    <Button onClick={handleConnect}>
+                        {address
+                            ? `Authorized ERC20`
+                            : 'Connect ERC20'}</Button>
                 </div>
+
+                <Button onClick={() => navigate('/connect')}> на след экран</Button>
 
             </div>
         </div>

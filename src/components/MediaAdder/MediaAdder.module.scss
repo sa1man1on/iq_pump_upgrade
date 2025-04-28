@@ -115,7 +115,7 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: darken(#3498db, 10%);
+    background-color: rgba(52, 152, 219, 0.1);
   }
 
   &:disabled {

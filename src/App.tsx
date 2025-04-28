@@ -13,12 +13,15 @@ import TaskCreation from "./pages/TaskCreation/TaskCreation.tsx";
 import TournamentMenu from "./pages/TournamentMenu/TournamentMenu.tsx";
 import TournamentCreation from "./pages/TournamentCreation/TournamentCreation.tsx";
 import Tournament from "./pages/Tournament/Tournament.tsx";
-import BuyArtefact from "./pages/BuyArtefact/BuyArtefact.tsx";
+import BuyArtefactHeal from "./pages/BuyArtefactHeal/BuyArtefactHeal.tsx";
 import TournamentQuiz from "./pages/TournamentQuiz/TournamentQuiz.tsx";
 import TournamentAccepted from "./pages/TournamentAccepted/TournamentAccepted.tsx";
 import Chests from "./pages/Chests/Chests.tsx";
 import QuizWin from "./pages/QuizWin/QuizWin.tsx";
 import QuizLost from "./pages/QuizLost/QuizLost.tsx";
+import BuyArtefactShield from "./pages/BuyArtefactShield/BuyArtefactShield.tsx";
+import BuyArtefactNext from "./pages/BuyArtefactNext/BuyArtefactNext.tsx";
+import GettingNewCharacter from "./pages/GettingNewCharacter/GettingNewCharacter.tsx";
 
 
 function App() {
@@ -37,21 +40,20 @@ function App() {
                     <Route path="/create_task" element={<TaskCreation/>}/>
                     <Route path="/tournament_menu" element={<TournamentMenu/>}/>
                     <Route path='/tournament_create' element={<TournamentCreation/>}/>
-                    <Route path='/buy_artefact_next' element={<BuyArtefact/>}/>
-                    <Route path='/buy_artefact_shield' element={<BuyArtefact/>}/>
-                    <Route path='/buy_artefact_heal' element={<BuyArtefact/>}/>
+                    <Route path='/buy_artefact_next' element={<BuyArtefactNext/>}/>
+                    <Route path='/buy_artefact_shield' element={<BuyArtefactShield/>}/>
+                    <Route path='/buy_artefact_heal' element={<BuyArtefactHeal/>}/>
                     <Route path='/tournament_running' element={<TournamentQuiz/>}/>
                     <Route path='/tournament_waiting' element={<Tournament/>}/>
                     <Route path='/tournament_accepted' element={<TournamentAccepted isTimer={true}/>}/>
 
-                    
+                    {/*не активные*/}
                     <Route path='/chests' element={<Chests/>}/>
                     <Route path='/win' element={<QuizWin/>}/>
                     <Route path='/lost' element={<QuizLost/>}/>
-                    {/*<Route path="/" element={<QuizLost/>}/>*/}
-                    {/*<Route path="/quiz_end" element={<QuizEnd/>}/>*/}
-                    {/*<Route path="/" element={<Chests/>}/>*/}
-                    {/*<Route path="/" element={<QuizLost/>}/>*/}
+                    <Route path='/lost1' element={<GettingNewCharacter/>}/>
+
+
                 </Routes>
             </BrowserRouter>
         </div>

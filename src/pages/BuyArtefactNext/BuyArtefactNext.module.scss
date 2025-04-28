@@ -1,0 +1,67 @@
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+.GameContainer {
+  position: relative;
+  width: 1920px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgb(0, 255, 255) -75%, transparent 31%);
+  pointer-events: none;
+  filter: blur(53px);
+}
+
+.price {
+  color: var(--main-blue);
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.button_action_wrapper {
+  margin: 15px 0;
+}
+
+.description {
+  margin: 0 auto;
+  font-weight: 400;
+  color: white;
+  line-height: 1.4;
+  font-size: 14px;
+  width: 190px;
+}
+
+.artefact {
+  margin-top: 100px;
+  height: 300px;
+  background: radial-gradient(circle, rgb(0, 255, 255) -120%, #000000 69%);
+}
+
+.artefact_image {
+  margin: 70px 0 0;
+}
+
+.artefact_name {
+  color: #cccccc;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 900;
+}
