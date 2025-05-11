@@ -45,10 +45,20 @@ function TournamentMenu() {
                         </div>
                         <div className={cls.opponent_cards_container}>
                             <div className={cls.card_grid}>
-                                <OpponentCard isAcceptedTournament={true}/>
-                                <OpponentCard isRunningTournament={true}/>
-                                <OpponentCard/>
-                                <OpponentCard/>
+                                <OpponentCard
+                                    isAcceptedTournament={true}
+                                    tournamentStart="2025-05-04T18:30:00Z"   // или new Date(...)
+                                />
+                                <OpponentCard
+                                    isRunningTournament={true}
+                                    tournamentStart="2025-05-04T18:30:00Z"   // или new Date(...)
+                                />
+                                <OpponentCard
+                                    tournamentStart="2025-05-04T18:30:00Z"   // или new Date(...)
+                                />
+                                <OpponentCard
+                                    tournamentStart="2025-05-04T18:30:00Z"   // или new Date(...)
+                                />
                             </div>
                         </div>
                     </div>

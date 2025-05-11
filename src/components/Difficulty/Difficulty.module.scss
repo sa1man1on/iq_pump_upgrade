@@ -7,20 +7,87 @@
   padding: 2px;
   border-radius: 10px;
   gap: 10px;
+}
+
+.opponent_difficulty {
 
 }
-.opponent_difficulty{
 
-}
-.opponent_difficulty_stage{
+.opponent_difficulty_stage {
   width: 45px;
   height: 15px;
   background-color: #d1d1d1;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.active{
+
+.active {
   background-color: #00ffff;
 }
-.horizontal{
+
+.easy_active {
+  background-color: #00ffff;
+}
+
+.medium_active {
+  background-color: #00ffff;
+}
+
+.hard_active {
+  background-color: #00ffff;
+}
+
+.horizontal {
   transform: rotate(180deg);
+}
+
+.animated_word_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.animated_word {
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeScaleIn 1.2s ease-in-out;
+}
+
+.easy {
+  color: #ffffff;
+}
+
+.medium {
+  color: #ffffff;
+}
+
+.hard {
+  color: #ffffff;
+}
+
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
 }

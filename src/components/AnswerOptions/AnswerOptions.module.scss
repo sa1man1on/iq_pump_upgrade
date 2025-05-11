@@ -1,10 +1,22 @@
-.wrapper{
-  display: grid;
-  grid-template-columns: repeat(2, 0fr);
+.answer_options_wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  padding: 0 6px;
+  width: 100%;
+
 }
-.outer_wrapper{
-  margin:0 auto;
-  width: fit-content;
+
+.margin {
+  margin: 0 15px;
+}
+
+.line_top {
+  display: flex;
+  gap: 10px;
+
+}
+
+.line_bottom {
+  display: flex;
+  gap: 10px;
 }

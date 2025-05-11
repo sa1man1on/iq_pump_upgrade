@@ -1,0 +1,119 @@
+:root {
+  /* fallback, если css‑var ещё не задана inline */
+  --glow-padding: 16px;
+}
+
+/* Корневой контейнер подстраивается под размер children */
+.wrapper {
+  position: relative;
+  display: inline-block;
+  /* Для корректного размера при inline‑блоках с изображениями */
+  vertical-align: top;
+}
+
+/* Дочерний элемент остаётся в нормальном документном потоке */
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Миксин для сияющих слоёв: перекрываем контент со всех сторон,
+   добавляя “выступ” = var(--glow-padding)  */
+@mixin glow-layer($blur, $spread, $color) {
+  position: absolute;
+  top: calc(-1 * var(--glow-padding));
+  left: calc(-1 * var(--glow-padding));
+  width: calc(100% + var(--glow-padding) * 2);
+  height: calc(100% + var(--glow-padding) * 2);
+  border-radius: inherit; /* повторяет любую радиус‑кривизну у контента */
+  pointer-events: none; /* клики проходят сквозь сияние */
+  box-shadow: 0 0 $blur $spread $color;
+  z-index: 1;
+}
+
+/* Слои с анимацией «дыхания» */
+.shadow1 {
+  @include glow-layer(38px, 17px, rgba(0, 195, 255, .25));
+  animation: shimmer-1 8s ease-in-out infinite alternate;
+}
+
+.shadow2 {
+  @include glow-layer(47px, 10px, rgba(0, 132, 255, .20));
+  animation: shimmer-2 9s ease-in-out infinite alternate;
+}
+
+.shadow3 {
+  @include glow-layer(97px, 10px, rgba(46, 255, 195, .25));
+  animation: shimmer-3 10s ease-in-out infinite alternate;
+}
+
+.shadow4 {
+  @include glow-layer(17px, 10px, rgba(0, 161, 161, .20));
+  animation: shimmer-4 11s ease-in-out infinite alternate;
+}
+
+.shadow5 {
+  @include glow-layer(77px, 10px, rgba(0, 255, 179, .22));
+  animation: shimmer-5 12s ease-in-out infinite alternate;
+}
+
+/* Анимации (упрощённые) */
+@keyframes shimmer-1 {
+  0% {
+    opacity: .8
+  }
+  50% {
+    opacity: .5
+  }
+  100% {
+    opacity: .9
+  }
+}
+
+@keyframes shimmer-2 {
+  0% {
+    opacity: .8
+  }
+  50% {
+    opacity: .4
+  }
+  100% {
+    opacity: .9
+  }
+}
+
+@keyframes shimmer-3 {
+  0% {
+    opacity: .8
+  }
+  50% {
+    opacity: .4
+  }
+  100% {
+    opacity: .9
+  }
+}
+
+@keyframes shimmer-4 {
+  0% {
+    opacity: .8
+  }
+  50% {
+    opacity: .4
+  }
+  100% {
+    opacity: .9
+  }
+}
+
+@keyframes shimmer-5 {
+  0% {
+    opacity: .8
+  }
+  50% {
+    opacity: .4
+  }
+  100% {
+    opacity: .9
+  }
+}

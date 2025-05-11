@@ -29,7 +29,7 @@ function Connect() {
                 <div className={cls.code}><CodeInput></CodeInput></div>
                 <div className={cls.alert}>{t('not_connected')}</div>
                 <div className={cls.buttonWrapper}>
-                    <Button onClick={() => navigate('/connect')}>Подключиться</Button>
+                    <Button onClick={() => navigate('/quiz')}>Подключиться</Button>
                 </div>
 
             </div>

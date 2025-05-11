@@ -1,40 +1,36 @@
 .PageWrapper {
   width: 100vw;
   height: 100vh;
-  color: white;
   background-color: var(--page-background-color);
-
   display: flex;
   justify-content: center;
-
-
+  text-align: start;
 }
 
 .GameContainer {
-  width: 100vw;
-  padding-bottom: 90px;
+  position: relative;
+  width: 1920px;
+
+  flex-direction: column;
   align-items: center;
   background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  margin: 0 15px;
+
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1 {
+  font-size: 36px;
+  text-align: center;
 }
 
-.margin_top {
-  margin-top: 20px;
+p {
+  font-size: 18px;
 }
 
-.margin_top_layout {
-  margin-top: 110px;
-}
-
-.buttons_wrapper {
-  margin-bottom: 30px;
+.last {
+  padding-bottom: 50px;
 }

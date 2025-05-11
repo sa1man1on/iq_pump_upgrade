@@ -2,12 +2,18 @@ import {useState} from 'react';
 import cls from './LangSwitcher.module.scss';
 
 // фиксируем набор поддерживаемых языков в виде union‑типа
-type Language = 'English' | 'Русский';
-const languages: Language[] = ['English', 'Русский'];
+export type Language = 'RU' | 'EN';
+const languages: Language[] = ['RU', 'EN'];
 
-function LangSwitcher() {
+// отображаемые названия языков
+const languageNames: Record<Language, string> = {
+    RU: 'Русский',
+    EN: 'English',
+};
+
+export default function LangSwitcher() {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLang, setSelectedLang] = useState<Language>('English');
+    const [selectedLang, setSelectedLang] = useState<Language>('EN');
 
     const toggleDropdown = (): void => {
         setIsOpen(prev => !prev);
@@ -20,9 +26,8 @@ function LangSwitcher() {
 
     return (
         <div className={cls.wrapper}>
-            <div className={cls.label}>language</div>
-
             <div className={cls.current_lang} onClick={toggleDropdown}>
+                {/* Отображаем короткий код языка */}
                 {selectedLang}
                 <span className={cls.arrow}>{isOpen ? '▲' : '▼'}</span>
             </div>
@@ -35,7 +40,8 @@ function LangSwitcher() {
                             className={cls.language_item}
                             onClick={() => selectLanguage(lang)}
                         >
-                            {lang}
+                            {/* Отображаем полное название языка */}
+                            {languageNames[lang]}
                         </div>
                     ))}
                 </div>
@@ -43,5 +49,3 @@ function LangSwitcher() {
         </div>
     );
 }
-
-export default LangSwitcher;

@@ -1,33 +1,44 @@
-import {useState} from "react";
 import cls from "./AnswerOptions.module.scss";
 import AnswerButton from "../buttons/AnswerButton/AnswerButton";
+import clsx from "clsx";
 
-const variants = [
-    "Вариант ответа с большим количеством текста так чтобы",
-    "Вариант ответа с большим количеством текста так чтобы",
-    "Вариант ответа с большим количеством текста так чтобы",
-    "Вариант ответа с большим количеством текста так чтобы",
-];
 
 function AnswerOptions() {
-    // null — ничто не выбрано; number — индекс выбранного варианта
-    const [chosenIdx, setChosenIdx] = useState<number | null>(null);
+
 
     return (
-        <div className={cls.outer_wrapper}>
-            <div className={cls.wrapper}>
-                {variants.map((text, idx) => (
-                    <AnswerButton
-                        key={idx}
-                        isChosen={idx === chosenIdx}
-                        /* Пока не знаем верных / неверных, передаём undefined */
-                        isCorrect={undefined}
-                        onClick={() => setChosenIdx(idx)}
-                    >
-                        {text}
-                    </AnswerButton>
-                ))}
+        <div className={cls.answer_options_wrapper}>
+            <div className={clsx(cls.line_top, cls.margin)}>
+                <AnswerButton
+                    isChosen={false}
+                    isCorrect={undefined}
+                >
+                    Это строка длиной 30 символов!
+                </AnswerButton>
+                <AnswerButton
+                    isChosen={false}
+                    isCorrect={undefined}
+                >
+                    2
+                </AnswerButton>
             </div>
+
+            <div className={clsx(cls.line_bottom, cls.margin)}>
+                <AnswerButton
+                    isChosen={false}
+                    isCorrect={undefined}
+                >
+                    3
+                </AnswerButton>
+                <AnswerButton
+                    isChosen={false}
+                    isCorrect={undefined}
+                >
+                    4
+                </AnswerButton>
+            </div>
+
+
         </div>
     );
 }

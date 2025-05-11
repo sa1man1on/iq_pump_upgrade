@@ -7,10 +7,13 @@ import {useState} from "react";
 import Button from "../../components/buttons/Button/Button.tsx";
 import Logo from "../../components/Logo/Logo.tsx";
 import Layout from "../../layouts/Layout/Layout.tsx";
+import axios from "axios";
+import {useEntrySource} from "../../hooks/useEntrySource.ts";
+
 
 export default function Enter() {
     const navigate = useNavigate();
-
+    const entrySource = useEntrySource();   // 'telegram' | 'web'
 
     const {open} = useAppKit();
     const provider = useWalletProvider();
@@ -21,14 +24,46 @@ export default function Enter() {
 
         if (!provider) return;
 
+
         const signer = await provider.getSigner();
 
         const addr = await signer.getAddress();
 
         if (addr) {
             setAddress(addr);
-            console.log('Игрок авторизован как', addr);
+            console.log('Пользователь авторизовался через метамаск --> ', addr);
         }
+
+        const requestData: { account: string } = {account: addr}
+
+        // есть ли пользователь в бд?
+        const response = await axios.post('https://stt.market/api/notifications/check/', requestData);
+
+        // 1. Если это происходит в мини-апп
+        if (entrySource == 'telegram') {
+
+        }
+        if (response.status === 200) {
+            // Привязан ли он к боту в тг?
+            //2. Спрашиваю бек привязан ли такой id к телеге?
+            // 1) Получаю id телеги
+            // 2) Проверяю есть ли такой пользователь в сервисе
+            // // для этого нужно - отправить за запрос на 'https://stage.iqpump.online/api/fetch_user'(туда передать телеграм айди) и он автоматически его зарегистрирует, если его нет
+            // а если есть то завершаю авторизацию - перенапрвляю на страницу квиз
+            navigate('/quiz')
+
+            // const userId = useAppSelector(state => state.game.user?.userId);
+            // const userData = {
+            //     user_id: userId,
+            //     language: 'ru'
+            // }
+
+        }
+        // если не привязан к боту в тг, то
+        if (response.status !== 200) {
+            navigate('/connect')
+        }
+
 
     };
 

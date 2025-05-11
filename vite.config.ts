@@ -1,11 +1,11 @@
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
+import {defineConfig} from 'vite';
+import basicSsl from '@vitejs/plugin-basic-ssl';
 
-// https://vite.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [basicSsl()],                // ← даёт самоподписанный TLS
     server: {
-        host: true,
-        allowedHosts: ['a484-62-4-39-197.ngrok-free.app'],
+        host: true,                         // 0.0.0.0 (нужно для ngrok)
+        https: true,                        // включаем HTTPS
+        allowedHosts: ['.ngrok-free.app'],  // пропускаем все поддомены ngrok
     },
-})
+});

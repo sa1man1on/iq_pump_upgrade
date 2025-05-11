@@ -12,6 +12,7 @@ function BuyArtefactNext() {
             <div className={cls.GameContainer}>
                 <GameLayout isTournamentCreation={true}/>
 
+                {/*<GlowWrapper>*/}
                 <div className={cls.artefact}>
                     <img className={cls.artefact_image}
                          src={artefact_image}
@@ -19,14 +20,17 @@ function BuyArtefactNext() {
                     <div className={cls.artefact_name}>
                         SHIELD
                     </div>
-
                 </div>
+                {/*</GlowWrapper>*/}
+
 
                 <div className={cls.description}>
                     Позволяет пропустить
                     задание
                 </div>
+
                 <div className={cls.price}>500</div>
+
                 <div className={cls.button_action_wrapper}>
                     <Button>Купить</Button>
                 </div>
@@ -36,7 +40,7 @@ function BuyArtefactNext() {
                 >назад
 
                 </CancelButton>
-                
+
             </div>
         </div>
     );

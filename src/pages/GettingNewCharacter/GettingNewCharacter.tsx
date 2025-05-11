@@ -7,11 +7,11 @@ function GettingNewCharacter() {
     return (
         <div className={cls.PageWrapper}>
             <div className={cls.GameContainer}>
-                <GameLayout></GameLayout>
+                <GameLayout isProfile={true}></GameLayout>
                 <div className={cls.getting_new_character_wrapper}>
                     <div className={cls.coefficient}>
                         <div className={cls.coefficient_number}>X1,5</div>
-                        <div className={cls.coefficient_description}>Коэффициент <br/> увеличения </div>
+                        <div className={cls.coefficient_description}>Коэффициент <br/> увеличения</div>
                     </div>
                     <div className={cls.congratulation}>
                         Поздравляем!
@@ -20,7 +20,21 @@ function GettingNewCharacter() {
                         <br/>
                         уровня интеллекта
                     </div>
-                    <div className={cls.name}>Shukracharuya</div>
+
+
+                    <div className={cls.name}>
+                        <div className={cls.content}>
+                            <h1 className={cls.title}>Shukracharuya
+                                <div className={cls.aurora}>
+                                    <div className={cls.aurora__item}></div>
+                                    <div className={cls.aurora__item}></div>
+                                    <div className={cls.aurora__item}></div>
+                                    <div className={cls.aurora__item}></div>
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+
                     <img className={cls.new_character} src={new_character_image} alt=""/>
                 </div>
             </div>

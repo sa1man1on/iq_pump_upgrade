@@ -1,6 +1,6 @@
 import cls from './ControlsPanel.module.scss';
-import Difficulty from "../Difficulty/Difficulty.tsx";
 import ArtefactsGroup from "../ArtefactsGroup/ArtefactsGroup.tsx";
+import Difficulty from "../Difficulty/Difficulty.tsx";
 
 function ControlsPanel() {
     return (

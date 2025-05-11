@@ -1,18 +1,20 @@
 // TournamentLayout.jsx
-import {Link, Outlet} from 'react-router-dom';
+import {Link, Outlet, useNavigate} from 'react-router-dom';
 import cls from './Layout.module.scss'
 import back_arrow from '../../assets/back_arrow.svg'
 import LangSwitcher from "../../components/LangSwitcher/LangSwitcher.tsx";
 
 const Layout = () => {
-
+    const navigate = useNavigate();
 
     return (
         <div>
             <div className={cls.LayoutWrapper}>
                 {location.pathname === '/' &&
                     <>
-                        <div className={cls.aboutGame}>{'Об игре'}</div>
+                        <div onClick={() => {
+                            navigate('/about')
+                        }} className={cls.aboutGame}>{'Об игре'}</div>
 
                         <LangSwitcher></LangSwitcher>
                     </>
